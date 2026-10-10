@@ -2,7 +2,7 @@
   "date": "2026-10-08",
   "year": 2026,
   "quarter": "Q3",
-  "generated_at": "2026-10-10 13:13:18",
+  "generated_at": "2026-10-10 14:35:52",
   "stocks": {
     "002536": {
       "code": "002536",
@@ -50,6 +50,232 @@
       "manual_note": "财务列为10-08预告区间中值推算：前三季扣非0.916~1.136亿（同比-69.85%~-62.61%），单季同比/环比按中值口径；实际以三季报为准",
       "institution_expectation": "12家机构全年净利预测均值4.39亿",
       "auto_hash": "e6de468afbabc850b7606b071895acd75f03815f8257678dda7ac77b220a5085"
+    },
+    "600521": {
+      "code": "600521",
+      "report_period": "Q3",
+      "name": "华海药业",
+      "price": 17.45,
+      "change_pct": 4.8,
+      "market_cap_yi": 261.27,
+      "industry": "医药制造业",
+      "q_deduct_yi": 2.7618,
+      "cum_deduct_yi": 7.025,
+      "prev_year_q_deduct_yi": -0.9337,
+      "prev_q_deduct_yi": 2.9029,
+      "forecast": {
+        "np_median_yi": 9.88,
+        "n_reports": 5,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 7.34,
+        "np_max_yi": 12.86
+      },
+      "news": [
+        "利好！600521，前三季度净利润预计翻倍",
+        "华海药业预计前三季度实现净利约10.28亿元至11.03亿元，同比增长约170%至190%",
+        "华海药业：2026年前三季度净利润同比预增170%—190%",
+        "华海药业：预计2026年前三季度净利润同比增长170%-190%",
+        "8股今日获机构买入评级"
+      ],
+      "announcements": [
+        "浙江华海药业股份有限公司2026年前三季度业绩预增公告",
+        "浙江华海药业股份有限公司关于为子公司提供担保的进展公告"
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 14:35:43",
+      "yoy_pct": 395.7909392738567,
+      "qoq_pct": -4.8606565847945085,
+      "dynamic_pe": 26.444331983805665,
+      "cum_pe": 27.89359430604982,
+      "peg": null,
+      "yoy_pct_text": "扭亏为盈",
+      "growth_reason": "原料药业务全球销售增长、国内制剂集采接续增量、美国制剂扭亏为盈、缬沙坦仲裁胜诉收回律师费及关税退回、研发费用同比下降（来源：业绩预增公告临2026-106号）",
+      "manual_note": "据10-07预增公告推算：前三季扣非6.62~7.43亿（累计同比+145%~+175%），去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准；另汇兑损失约1.3亿",
+      "auto_hash": "a65fe83d7d930509e5b66d1f4bf5c4dc34d865aaceed01396c33fed0df6b5bc1"
+    },
+    "300821": {
+      "code": "300821",
+      "report_period": "Q3",
+      "name": "东岳硅材",
+      "price": 17.15,
+      "change_pct": 20.01,
+      "market_cap_yi": 205.8,
+      "industry": "化学原料和化学制品制造业",
+      "q_deduct_yi": 1.2951,
+      "cum_deduct_yi": 5.99,
+      "prev_year_q_deduct_yi": -0.3316,
+      "prev_q_deduct_yi": 2.5336,
+      "forecast": null,
+      "news": [
+        "300821，“20cm”涨停",
+        "300821，直线涨停！净利预增超190倍",
+        "净利预增超19000%！300821，“20CM”涨停",
+        "东岳硅材300821龙虎榜数据10-09)",
+        "净利暴增近200倍！300821，最新业绩出炉"
+      ],
+      "announcements": [
+        "2026年前三季度业绩预告"
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [
+        "forecast: 无机构预期数据（可人工 override np_median_yi）"
+      ],
+      "fetched_at": "2026-10-10 14:35:45",
+      "yoy_pct": 490.56091676718944,
+      "qoq_pct": -48.883012314493214,
+      "dynamic_pe": null,
+      "cum_pe": 25.76794657762938,
+      "peg": null,
+      "yoy_pct_text": "扭亏为盈",
+      "growth_reason": "供需格局改善主要产品价格上涨，工业硅采购价下降带动单位成本降低、综合毛利率提升，叠加精细化管理（来源：业绩预告2026-055）",
+      "manual_note": "据10-08预告推算：前三季扣非5.89~6.09亿，去年同期受'7·20'火灾影响基数极低、累计同比不具可比性，去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准",
+      "auto_hash": "89d6f4eb1b0f5fdf2675f97fa641b321a460ab6b4010054aa724f0f8ccb30cb8"
+    },
+    "300964": {
+      "code": "300964",
+      "report_period": "Q3",
+      "name": "本川智能",
+      "price": 73.99,
+      "change_pct": 9.55,
+      "market_cap_yi": 79.07,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": 0.7673,
+      "cum_deduct_yi": 1.18,
+      "prev_year_q_deduct_yi": 0.1184,
+      "prev_q_deduct_yi": 0.2903,
+      "forecast": {
+        "np_median_yi": 0.82,
+        "n_reports": 2,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 0.54,
+        "np_max_yi": 1.09
+      },
+      "news": [
+        "300964，拟砸20亿元布局AI算力PCB！",
+        "上证早知道｜300864，实控人或变更；300964，30亿元加码高端PCB项目",
+        "300964，拟砸20亿元布局AI算力PCB！上半年净利润近乎翻倍，股价年内涨逾五成",
+        "本川智能300964.SZ)：拟投不超10亿元建设多层高端互连产品华南智造基地，聚焦HDI及高多层板",
+        "本川智能前三季净利润预计增长190.24%~335.36%"
+      ],
+      "announcements": [
+        "2026年前三季度业绩预告"
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 14:35:47",
+      "yoy_pct": 548.0574324324325,
+      "qoq_pct": 164.31277988287977,
+      "dynamic_pe": 96.42682926829268,
+      "cum_pe": 50.25635593220339,
+      "peg": 0.17594292780653184,
+      "growth_reason": "大客户战略与订单增长，南京溧水产线爬坡及珠海硕鸿一期投产释放规模效应，高多层/HDI等高附加值PCB占比提升，供应链精细化管控（来源：业绩预告2026-064）",
+      "manual_note": "据10-08预告推算：前三季扣非0.944~1.416亿（累计同比+212%~+368%）；单季同比+548%系去年同期基数仅1184万所致；按区间中值推算，实际以三季报为准",
+      "auto_hash": "d7a2be95a6bbdd30cee9f6ead5a677a135a0d84dce1ce31756aa2f18ecce007f"
+    },
+    "300373": {
+      "code": "300373",
+      "report_period": "Q3",
+      "name": "扬杰科技",
+      "price": 83.48,
+      "change_pct": 3.06,
+      "market_cap_yi": 453.59,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": 5.4668,
+      "cum_deduct_yi": 12.7109,
+      "prev_year_q_deduct_yi": 3.3996,
+      "prev_q_deduct_yi": 3.6525,
+      "forecast": {
+        "np_median_yi": 17.56,
+        "n_reports": 6,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 16.55,
+        "np_max_yi": 18.87
+      },
+      "news": [
+        "涉内幕交易，300373两名员工被罚",
+        "扬杰科技2026年前三季度归母净利润同比预增20%-40%",
+        "扬杰科技：预计2026年前三季度净利润同比增长20%-40%",
+        "扬杰科技：预计前三季度归母净利润同比增20%-40%",
+        "12家创业板公司前三季业绩亮相 75.00%预增"
+      ],
+      "announcements": [
+        "2026年前三季度业绩预告"
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 14:35:48",
+      "yoy_pct": 60.80715378279798,
+      "qoq_pct": 49.67282683093772,
+      "dynamic_pe": 25.830865603644646,
+      "cum_pe": 26.76384048336467,
+      "peg": 0.4247997808927551,
+      "growth_reason": "功率半导体行业受AI服务器、新能源车、光储需求带动景气上行，营收同比增超30%；汽车与SiC业务收入同比增超100%（Q3 SiC同比近200%），精益生产降本增厚盈利（来源：业绩预告2026-042）",
+      "manual_note": "据10-08预告推算：前三季扣非11.74~13.68亿（累计同比+30.56%~+52.22%）；按区间中值推算，实际以三季报为准",
+      "auto_hash": "037ec4917df3e02325819f602ee9e77f6656ec6a6094479eec2048c2a765d5f2"
+    },
+    "300209": {
+      "code": "300209",
+      "report_period": "Q3",
+      "name": "行云科技",
+      "price": 34.46,
+      "change_pct": 2.04,
+      "market_cap_yi": 320.01,
+      "industry": "AI算力",
+      "q_deduct_yi": 2.6328,
+      "cum_deduct_yi": 2.7,
+      "prev_year_q_deduct_yi": -0.6924,
+      "prev_q_deduct_yi": 0.2878,
+      "forecast": null,
+      "news": [
+        "利好！300209，第三季度净利预增超5倍！",
+        "算力业务再落大单！300209全资子公司、境外孙公司接连签单 合计金额超8亿元",
+        "300209，签算力大单！芯片大厂，第三轮涨价（附股）",
+        "行云科技回应实控人股权轮候冻结：系诉前保全所致 相关案件均胜诉",
+        "12家创业板公司前三季业绩亮相 75.00%预增"
+      ],
+      "announcements": [
+        "2026年前三季度业绩预告",
+        "北京国枫律师事务所关于行云科技股份有限公司全资子公司签署重大合同的法律意见书",
+        "北京国枫律师事务所关于行云科技股份有限公司全资子公司签署重大合同的法律意见书",
+        "关于全资境外孙公司签订重大销售合同的公告",
+        "关于全资子公司深圳行云签订重大销售合同的公告"
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [
+        "forecast: 无机构预期数据（可人工 override np_median_yi）"
+      ],
+      "fetched_at": "2026-10-10 14:35:50",
+      "yoy_pct": 480.2426343154246,
+      "qoq_pct": 814.8019457956915,
+      "dynamic_pe": null,
+      "cum_pe": 88.89166666666667,
+      "peg": null,
+      "yoy_pct_text": "扭亏为盈",
+      "growth_reason": "AI算力基础设施需求旺盛，算力服务器销售爆发式增长、算力租赁8月起确认收入（头部客户集群起租、存量订单租金上调），授信与融资保障订单交付（来源：业绩预告2026-129）",
+      "manual_note": "据10-08预告推算：前三季扣非2.45~2.95亿（去年同期亏损0.78亿，扭亏为盈），含股权激励摊销约5,800万；按区间中值推算，实际以三季报为准",
+      "auto_hash": "0f91d2a4db808bfca77bd258bb46be0bcf447d0fda700e0804d60a8aeeec8338"
     }
   },
   "failed": []
