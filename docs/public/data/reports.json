@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-10-10 10:25:56",
+  "days": [
+    {
+      "date": "2025-10-09",
+      "year": 2025,
+      "quarter": "Q3",
+      "rows": [
+        {
+          "year": 2025,
+          "quarter": "Q3",
+          "date": "2025-10-09",
+          "code": "688099",
+          "name": "晶晨股份",
+          "price": 99.71,
+          "change_pct": 5.44,
+          "market_cap_yi": 422.09,
+          "industry": "端侧AI",
+          "dynamic_pe": 15.63,
+          "cum_pe": 25.84,
+          "yoy_pct": 290.0,
+          "qoq_pct": 70.0,
+          "peg": 0.05,
+          "growth_reason": "端侧AI芯片放量带动营收高增，费用率摊薄推动扣非利润大增（示例：人工修正后不带 * 标记）",
+          "manual_note": "示例：已对照三季报原文核对；机构预期：8家机构全年净利预测约27亿（均值近似中值）",
+          "star_fields": [
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "688099",
+            "name": "晶晨股份",
+            "price": "99.71",
+            "change_pct": "+5.44%",
+            "market_cap_yi": "422.09",
+            "industry": "端侧AI",
+            "dynamic_pe": "15.63*",
+            "cum_pe": "25.84",
+            "yoy_pct": "+290.0%",
+            "qoq_pct": "+70.0%",
+            "peg": "0.05*",
+            "growth_reason": "端侧AI芯片放量带动营收高增，费用率摊薄推动扣非利润大增（示例：人工修正后不带 * 标记）",
+            "manual_note": "示例：已对照三季报原文核对；机构预期：8家机构全年净利预测约27亿（均值近似中值）"
+          }
+        }
+      ]
+    }
+  ],
+  "industries": [
+    "端侧AI"
+  ],
+  "quarters": [
+    "2025/Q3"
+  ],
+  "total_rows": 1
+}

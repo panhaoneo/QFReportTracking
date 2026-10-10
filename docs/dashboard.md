@@ -1,0 +1,15 @@
+---
+layout: page
+title: 筛选看板
+---
+
+# 筛选看板
+
+<ReportTable />
+
+## 数据说明
+
+- 数据来自每日运行 `python run.py --date <日期> --codes <代码列表>` 后自动生成。
+- 带 `*` 的字段由脚本/AI 生成，建议人工核验；在 `manual/` 中做 override 后不再带星号。
+- 点击左侧「每日报告」（`日期 财报跟踪`）可查看当天归档的原始 Markdown。
+- 指标口径（动态PE、累计PE、同比/环比、PEG）见仓库 README。

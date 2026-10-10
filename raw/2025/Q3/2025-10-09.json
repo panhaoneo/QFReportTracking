@@ -1,0 +1,51 @@
+{
+  "date": "2025-10-09",
+  "year": 2025,
+  "quarter": "Q3",
+  "generated_at": "2026-10-10 10:24:39",
+  "stocks": {
+    "688099": {
+      "code": "688099",
+      "name": "晶晨股份",
+      "price": 99.71,
+      "change_pct": 5.44,
+      "market_cap_yi": 422.09,
+      "industry": "端侧AI",
+      "q_deduct_yi": 6.0,
+      "cum_deduct_yi": 12.25,
+      "prev_year_q_deduct_yi": 1.5385,
+      "prev_q_deduct_yi": 3.5294,
+      "forecast": {
+        "np_median_yi": 27.0,
+        "growth_median_pct": 45.0,
+        "n_reports": 8,
+        "target_year": 2025,
+        "source": "demo-fixture",
+        "note": "示例数据，非真实抓取结果"
+      },
+      "news": [
+        "示例资讯：晶晨股份三季度业绩大幅预增，端侧AI芯片需求旺盛"
+      ],
+      "announcements": [
+        "示例公告：2025年第三季度报告"
+      ],
+      "sources": {
+        "quote": "demo-fixture",
+        "fin": "demo-fixture"
+      },
+      "errors": [],
+      "fetched_at": "2025-10-09 21:30:00",
+      "offline": true,
+      "yoy_pct": 289.9902502437439,
+      "qoq_pct": 70.00056666855556,
+      "dynamic_pe": 15.632962962962962,
+      "cum_pe": 25.842244897959183,
+      "peg": 0.05390858123617285,
+      "growth_reason": "端侧AI芯片放量带动营收高增，费用率摊薄推动扣非利润大增（示例：人工修正后不带 * 标记）",
+      "manual_note": "示例：已对照三季报原文核对",
+      "institution_expectation": "8家机构全年净利预测约27亿（均值近似中值）",
+      "auto_hash": "77e7a20667775ec9df8263176292a57b4186fce9655cd1b21191431e6887933b"
+    }
+  },
+  "failed": []
+}
