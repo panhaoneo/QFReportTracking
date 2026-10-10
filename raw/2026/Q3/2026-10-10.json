@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-10",
+  "year": 2026,
+  "quarter": "Q3",
+  "generated_at": "2026-10-10 16:49:26",
+  "stocks": {
+    "600176": {
+      "code": "600176",
+      "report_period": "Q3",
+      "name": "中国巨石",
+      "price": 38.57,
+      "change_pct": -2.48,
+      "market_cap_yi": 1544.01,
+      "industry": "非金属矿物制品业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 74.92,
+        "n_reports": 30,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 40.43,
+        "np_max_yi": 84.74
+      },
+      "announcements": [
+        {
+          "title": "中国巨石2026年前三季度业绩预增公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600176&announcementId=1225598758&orgId=gssh0600176&announcementTime=2026-10-10",
+          "date": "2026-10-10"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "三季报预告点评：业绩如期释放，10月电子布涨价落地",
+          "org": "国金证券",
+          "date": "2026-10-10",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610101830288932_1.pdf"
+        },
+        {
+          "title": "2026年半年报点评：产能优势突出，提价贡献弹性",
+          "org": "西南证券",
+          "date": "2026-08-25",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608251828388135_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:48:06",
+      "offline": true,
+      "auto_hash": "5bda2a13c76049761c79ef3e5db263a5ccffa59c85163373a0c43de1e34c675f"
+    },
+    "603228": {
+      "code": "603228",
+      "report_period": "Q3",
+      "name": "景旺电子",
+      "price": 96.98,
+      "change_pct": -0.93,
+      "market_cap_yi": 1042.87,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 22.09,
+        "n_reports": 13,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 18.13,
+        "np_max_yi": 25.11
+      },
+      "announcements": [
+        {
+          "title": "景旺电子2026年第三季度业绩预增公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=603228&announcementId=1225599436&orgId=9900029802&announcementTime=2026-10-10",
+          "date": "2026-10-10"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "2Q26收入与盈利环比改善，AI订单放量、产能梯次接续",
+          "org": "国信证券",
+          "date": "2026-09-22",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609221829741062_1.pdf"
+        },
+        {
+          "title": "线路联通世界，共建万物互联",
+          "org": "中邮证券",
+          "date": "2026-09-03",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609031828978637_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:48:09",
+      "offline": true,
+      "auto_hash": "58d7052a4258e61bb613c9ab11e291edc98f603147ab279dd8592bc1d03e9a00"
+    },
+    "688103": {
+      "code": "688103",
+      "report_period": "Q3",
+      "name": "国力电子",
+      "price": 68.11,
+      "change_pct": -3.42,
+      "market_cap_yi": 64.92,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 1.54,
+        "n_reports": 2,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 1.51,
+        "np_max_yi": 1.57
+      },
+      "announcements": [
+        {
+          "title": "关于2026年第三季度业绩预告的自愿性披露公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688103&announcementId=1225599644&orgId=9900035534&announcementTime=2026-10-10",
+          "date": "2026-10-10"
+        }
+      ],
+      "research_reports": [],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:48:11",
+      "offline": true,
+      "auto_hash": "1fd3e3c0f1c2113dd65dc1e8d804d324434e6a60269c4ec2a9828441c9447ac8"
+    },
+    "001389": {
+      "code": "001389",
+      "report_period": "Q3",
+      "name": "广合科技",
+      "price": 154.5,
+      "change_pct": -7.49,
+      "market_cap_yi": 730.36,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 22.56,
+        "n_reports": 6,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 20.27,
+        "np_max_yi": 24.04
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=001389&announcementId=1225599954&orgId=9900046622&announcementTime=2026-10-10 00:00:00",
+          "date": "2026-10-10"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "算力场景驱动增长",
+          "org": "中邮证券",
+          "date": "2026-08-28",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608281828627154_1.pdf"
+        },
+        {
+          "title": "产品结构升级，算力PCB进入高速成长期",
+          "org": "中邮证券",
+          "date": "2026-04-27",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202604271821609686_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:48:14",
+      "offline": true,
+      "auto_hash": "36a7b828f6e9020c425d1f03b430e99ab2cd9d2dbb446697fdd30ef670d628f5"
+    }
+  },
+  "failed": []
+}

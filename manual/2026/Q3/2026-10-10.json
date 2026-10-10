@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-10",
+  "note": "三季报未披露。财务口径按各公司2026前三季度业绩预告区间中值推算（景旺电子、国力电子为第三季度单季专项预告，公告直接给出单季区间），公告见表中链接。",
+  "overrides": {
+    "600176": {
+      "q_deduct_yi": 24.4766,
+      "prev_year_q_deduct_yi": 9.1128,
+      "prev_q_deduct_yi": 16.3208,
+      "cum_deduct_yi": 53.5557
+    },
+    "603228": {
+      "q_deduct_yi": 10.275,
+      "prev_year_q_deduct_yi": 2.3812,
+      "prev_q_deduct_yi": 2.7626,
+      "cum_deduct_yi": 14.9323
+    },
+    "688103": {
+      "q_deduct_yi": 0.286,
+      "prev_year_q_deduct_yi": 0.188,
+      "prev_q_deduct_yi": 0.1988,
+      "cum_deduct_yi": 0.5426
+    },
+    "001389": {
+      "q_deduct_yi": 5.056,
+      "prev_year_q_deduct_yi": 2.2599,
+      "prev_q_deduct_yi": 5.4864,
+      "cum_deduct_yi": 14.45
+    }
+  }
+}

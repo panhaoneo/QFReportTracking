@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-09",
+  "year": 2026,
+  "quarter": "Q3",
+  "generated_at": "2026-10-10 16:49:26",
+  "stocks": {
+    "600256": {
+      "code": "600256",
+      "report_period": "Q3",
+      "name": "广汇能源",
+      "price": 7.2,
+      "change_pct": 5.88,
+      "market_cap_yi": 460.22,
+      "industry": "煤炭开采和洗选业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 33.35,
+        "n_reports": 15,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 26.38,
+        "np_max_yi": 40.39
+      },
+      "announcements": [
+        {
+          "title": "广汇能源股份有限公司2026年前三季度业绩预增公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600256&announcementId=1225596445&orgId=gssh0600256&announcementTime=2026-10-09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "公司深度报告：民营能源全产业链龙头，产能增长业绩可期",
+          "org": "开源证券",
+          "date": "2026-10-05",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610051830145021_1.pdf"
+        },
+        {
+          "title": "受益于国际油价上行，公司上半年业绩同比提升",
+          "org": "国信证券",
+          "date": "2026-08-21",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608211828240682_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:35",
+      "offline": true,
+      "auto_hash": "279aeb93cc2a59571507aef6c69310e50ac730c27b2e3c8241c154ee2830738a"
+    },
+    "300054": {
+      "code": "300054",
+      "report_period": "Q3",
+      "name": "鼎龙股份",
+      "price": 63.53,
+      "change_pct": 0.94,
+      "market_cap_yi": 606.54,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 11.01,
+        "n_reports": 22,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 10.15,
+        "np_max_yi": 12.12
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300054&announcementId=1225596682&orgId=9900010037&announcementTime=2026-10-09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "半导体材料平台量利齐升，新业务打开成长空间",
+          "org": "太平洋",
+          "date": "2026-09-13",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609131829335611_1.pdf"
+        },
+        {
+          "title": "抛光垫、抛光液业务高速增长，多款材料稳健放量",
+          "org": "中银证券",
+          "date": "2026-08-31",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608311828797943_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:37",
+      "offline": true,
+      "auto_hash": "6d1765507ba4a2daaa856607735cdd3044437f5e0474cd4a8d75ce2e6d4b6968"
+    },
+    "605020": {
+      "code": "605020",
+      "report_period": "Q3",
+      "name": "永和股份",
+      "price": 30.7,
+      "change_pct": 2.54,
+      "market_cap_yi": 156.82,
+      "industry": "化学原料和化学制品制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 10.34,
+        "n_reports": 11,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 8.64,
+        "np_max_yi": 12.15
+      },
+      "announcements": [
+        {
+          "title": "浙江永和制冷股份有限公司2026年前三季度业绩预增公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=605020&announcementId=1225597543&orgId=9900041940&announcementTime=2026-10-09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "制冷剂业务维持高景气，氟聚合物放量构筑第二成长曲线",
+          "org": "太平洋",
+          "date": "2026-09-11",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609111829267089_1.pdf"
+        },
+        {
+          "title": "制冷剂景气向上，高端化转型开启成长新空间",
+          "org": "中邮证券",
+          "date": "2026-05-12",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202605121822206257_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:40",
+      "offline": true,
+      "auto_hash": "e196a4047b17c11d66db58dd3d685c5e379f90582776fb683964ccb3b57cf16b"
+    },
+    "688099": {
+      "code": "688099",
+      "report_period": "Q3",
+      "name": "晶晨股份",
+      "price": 99.71,
+      "change_pct": 5.44,
+      "market_cap_yi": 422.09,
+      "industry": "软件和信息技术服务业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 14.79,
+        "n_reports": 12,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 13.64,
+        "np_max_yi": 16.8
+      },
+      "announcements": [
+        {
+          "title": "晶晨股份2026年前三季度业绩预告的自愿性披露公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688099&announcementId=1225597877&orgId=9900038936&announcementTime=2026-10-09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "2026年前三季度业绩预告点评：Q3业绩高增，高端TV SoC持续放量",
+          "org": "东吴证券",
+          "date": "2026-10-09",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610091830257519_1.pdf"
+        },
+        {
+          "title": "2026年半年报点评：业绩符合预期，TV SoC与端侧AI持续突破",
+          "org": "东吴证券",
+          "date": "2026-08-20",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608201828220854_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:42",
+      "offline": true,
+      "auto_hash": "0896efc111c290675031167184d3a60fad5d376e0a664b38583afa2bc377fa0c"
+    },
+    "600882": {
+      "code": "600882",
+      "report_period": "Q3",
+      "name": "妙可蓝多",
+      "price": 21.13,
+      "change_pct": 9.99,
+      "market_cap_yi": 107.44,
+      "industry": "食品制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 3.39,
+        "n_reports": 28,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 2.98,
+        "np_max_yi": 3.62
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩快报公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600882&announcementId=1225597946&orgId=gssh0600882&announcementTime=2026-10-09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "2026年三季报业绩快报点评：核心业务逆势成长，盈利同步提升",
+          "org": "东吴证券",
+          "date": "2026-10-09",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610091830259621_1.pdf"
+        },
+        {
+          "title": "激励考核方案修订彰显务实，半年度完成50%",
+          "org": "东吴证券",
+          "date": "2026-09-14",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609141829357119_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:44",
+      "offline": true,
+      "auto_hash": "2f993d09f3ae59a6763d62c19aac8ae214cee8547c1b6896013fa2dc0bbdbf5b"
+    },
+    "301086": {
+      "code": "301086",
+      "report_period": "Q3",
+      "name": "鸿富瀚",
+      "price": 140.2,
+      "change_pct": -7.16,
+      "market_cap_yi": 176.46,
+      "industry": "计算机、通信和其他电子设备制造业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 4.92,
+        "n_reports": 5,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 4.65,
+        "np_max_yi": 5.18
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=301086&announcementId=1225598836&orgId=9900046519&announcementTime=2026-10-09 17:02:09",
+          "date": "2026-10-09"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "鸿鹄志，富五车，瀚未来",
+          "org": "中邮证券",
+          "date": "2026-06-24",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202606241823807800_1.pdf"
+        },
+        {
+          "title": "公司事件点评报告：消费电子稳健增长，把握液冷高景气机遇",
+          "org": "华鑫证券",
+          "date": "2026-04-23",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202604231821481474_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:cninfo_profile"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-10 16:47:46",
+      "offline": true,
+      "auto_hash": "a1a5e5e2b0a6dd3fb6fd2b19b581358a6cc4f75d5583f0ce79b2b9c04afd2fdf"
+    }
+  },
+  "failed": []
+}

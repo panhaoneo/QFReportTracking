@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-09",
+  "note": "三季报未披露。财务口径按各公司2026前三季度业绩预告/快报区间中值推算（广汇能源、晶晨股份公告直接给出第三季度单季区间；妙可蓝多为业绩快报实际数），公告见表中链接。",
+  "overrides": {
+    "600256": {
+      "q_deduct_yi": 14.55,
+      "prev_year_q_deduct_yi": 1.0463,
+      "prev_q_deduct_yi": 10.768,
+      "cum_deduct_yi": 27.9
+    },
+    "300054": {
+      "q_deduct_yi": 3.0532,
+      "prev_year_q_deduct_yi": 2.0079,
+      "prev_q_deduct_yi": 2.4832,
+      "cum_deduct_yi": 7.9
+    },
+    "605020": {
+      "q_deduct_yi": 2.7328,
+      "prev_year_q_deduct_yi": 1.8926,
+      "prev_q_deduct_yi": 3.5098,
+      "cum_deduct_yi": 8.0
+    },
+    "688099": {
+      "q_deduct_yi": 6.6488,
+      "prev_year_q_deduct_yi": 1.7252,
+      "prev_q_deduct_yi": 3.9832,
+      "cum_deduct_yi": 12.25
+    },
+    "600882": {
+      "q_deduct_yi": 0.3267,
+      "prev_year_q_deduct_yi": 0.1728,
+      "prev_q_deduct_yi": 0.5678,
+      "cum_deduct_yi": 1.5343
+    },
+    "301086": {
+      "q_deduct_yi": 1.1223,
+      "prev_year_q_deduct_yi": 0.5882,
+      "prev_q_deduct_yi": 0.3345,
+      "cum_deduct_yi": 1.8175
+    }
+  }
+}

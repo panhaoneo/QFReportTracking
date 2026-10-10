@@ -2,7 +2,7 @@
   "date": "2026-10-08",
   "year": 2026,
   "quarter": "Q3",
-  "generated_at": "2026-10-10 16:32:36",
+  "generated_at": "2026-10-10 16:49:26",
   "stocks": {
     "002536": {
       "code": "002536",
@@ -118,10 +118,10 @@
       "change_pct": 20.01,
       "market_cap_yi": 205.8,
       "industry": "化学原料和化学制品制造业",
-      "q_deduct_yi": 1.2951,
-      "cum_deduct_yi": 5.99,
-      "prev_year_q_deduct_yi": -0.3316,
-      "prev_q_deduct_yi": 2.5336,
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
       "forecast": null,
       "announcements": [
         {
@@ -138,12 +138,7 @@
       "errors": [
         "forecast: 无机构预期数据（可人工 override np_median_yi）"
       ],
-      "fetched_at": "2026-10-10 16:30:18",
-      "yoy_pct": 490.56091676718944,
-      "qoq_pct": -48.883012314493214,
-      "dynamic_pe": null,
-      "cum_pe": 25.76794657762938,
-      "peg": null,
+      "fetched_at": "2026-10-10 16:48:47",
       "offline": true,
       "auto_hash": "e6a7941ea3df424b074cb5c559fb8ff0b169fb09b7eea86d58c96260f3560f05"
     },
@@ -155,10 +150,10 @@
       "change_pct": 9.55,
       "market_cap_yi": 79.07,
       "industry": "计算机、通信和其他电子设备制造业",
-      "q_deduct_yi": 0.7673,
-      "cum_deduct_yi": 1.18,
-      "prev_year_q_deduct_yi": 0.1184,
-      "prev_q_deduct_yi": 0.2903,
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
       "forecast": {
         "np_median_yi": 0.82,
         "n_reports": 2,
@@ -181,12 +176,7 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 16:30:20",
-      "yoy_pct": 548.0574324324325,
-      "qoq_pct": 164.31277988287977,
-      "dynamic_pe": 96.42682926829268,
-      "cum_pe": 50.25635593220339,
-      "peg": 0.17594292780653184,
+      "fetched_at": "2026-10-10 16:48:50",
       "offline": true,
       "auto_hash": "fd053b42fc5e6f2508fb2c1c781ab76626a42828bde4d2666d46aa4cb28cc837"
     },
@@ -198,10 +188,10 @@
       "change_pct": 3.06,
       "market_cap_yi": 453.59,
       "industry": "计算机、通信和其他电子设备制造业",
-      "q_deduct_yi": 5.4668,
-      "cum_deduct_yi": 12.7109,
-      "prev_year_q_deduct_yi": 3.3996,
-      "prev_q_deduct_yi": 3.6525,
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
       "forecast": {
         "np_median_yi": 17.56,
         "n_reports": 6,
@@ -231,12 +221,7 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 16:30:22",
-      "yoy_pct": 60.80715378279798,
-      "qoq_pct": 49.67282683093772,
-      "dynamic_pe": 25.830865603644646,
-      "cum_pe": 26.76384048336467,
-      "peg": 0.4247997808927551,
+      "fetched_at": "2026-10-10 16:48:51",
       "offline": true,
       "auto_hash": "552173914f3316c5ace0cbf2bc90c73a1bed7888d7696c1646b26ec0a23f8b67"
     },
@@ -247,11 +232,11 @@
       "price": 34.46,
       "change_pct": 2.04,
       "market_cap_yi": 320.01,
-      "industry": "AI算力",
-      "q_deduct_yi": 2.6328,
-      "cum_deduct_yi": 2.7,
-      "prev_year_q_deduct_yi": -0.6924,
-      "prev_q_deduct_yi": 0.2878,
+      "industry": "零售业",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
       "forecast": null,
       "announcements": [
         {
@@ -268,12 +253,7 @@
       "errors": [
         "forecast: 无机构预期数据（可人工 override np_median_yi）"
       ],
-      "fetched_at": "2026-10-10 16:30:25",
-      "yoy_pct": 480.2426343154246,
-      "qoq_pct": 814.8019457956915,
-      "dynamic_pe": null,
-      "cum_pe": 88.89166666666667,
-      "peg": null,
+      "fetched_at": "2026-10-10 16:48:53",
       "offline": true,
       "auto_hash": "ad3deb760a417cea1ce887e889f6d9de33b9ad180ee9239434ee3c274b1f6bd7"
     }
