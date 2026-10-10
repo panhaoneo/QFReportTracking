@@ -247,7 +247,7 @@
 }
 
 /* 固定列宽：与表格 schema 列序对应
-   1代码 2股票 3股价 4涨跌幅 5市值 6行业 7动态PE 8累计PE 9同比 10环比 11PEG 12增长原因 13人工备注 */
+   1代码 2股票 3股价 4涨跌幅 5市值 6行业 7动态PE 8累计PE 9同比 10环比 11PEG 12公告/研报链接 13备注 */
 .vp-doc .rpt-table-wrap th:nth-child(1) { width: 74px; }
 .vp-doc .rpt-table-wrap th:nth-child(2) { width: 80px; }
 .vp-doc .rpt-table-wrap th:nth-child(3) { width: 60px; }
@@ -298,7 +298,7 @@
 }
 
 /* 列样式与表格 schema 列序对应：1代码 2股票 3股价 4涨跌幅 5市值 6行业
-   7动态PE 8累计PE 9同比 10环比 11PEG 12增长原因 13人工备注 */
+   7动态PE 8累计PE 9同比 10环比 11PEG 12公告/研报链接 13备注 */
 .vp-doc .rpt-table-wrap td:nth-child(1) {
   font-family: var(--vp-font-family-mono);
   white-space: nowrap;
