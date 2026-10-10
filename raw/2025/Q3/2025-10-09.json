@@ -2,7 +2,7 @@
   "date": "2025-10-09",
   "year": 2025,
   "quarter": "Q3",
-  "generated_at": "2026-10-10 15:28:50",
+  "generated_at": "2026-10-10 16:32:36",
   "stocks": {
     "688099": {
       "code": "688099",
@@ -51,9 +51,7 @@
       "dynamic_pe": 15.632962962962962,
       "cum_pe": 25.842244897959183,
       "peg": 0.05390858123617285,
-      "remark": "示例：已对照三季报原文核对",
-      "institution_expectation": "8家机构全年净利预测约27亿（均值近似中值）",
-      "auto_hash": "c9dff11f3becb42a39e9bd1a1adad889e2cb5058566160a69c467525a948e440"
+      "auto_hash": "b2cb3ce92e2e1779cf8ee9a515dbc94f6340fad375bc54c854764307c06a5f0c"
     }
   },
   "failed": []

@@ -7,7 +7,6 @@ manual/YYYY/Qn/YYYY-MM-DD.json 结构：
     "688099": {
       "np_median_yi": 28.5,            // 数值：机构预测全年净利润中值(亿)，联动重算 PE/PEG
       "yoy_pct": 280,                  // 数值：直接覆盖同比（也支持文本，如 "扭亏为盈"）
-      "institution_expectation": "某券商 q4 上调至…",
       "remark": "人工备注",
       "links": "[业绩预告](https://...) [研报·中信证券](https://...)"
     }
@@ -35,7 +34,7 @@ _COMPONENT_FIELDS = (
 )
 # 衍生指标字段：直接覆盖，优先级高于重算结果
 _DERIVED_FIELDS = ("dynamic_pe", "cum_pe", "yoy_pct", "qoq_pct", "peg")
-_TEXT_FIELDS = ("industry", "remark", "institution_expectation", "links")
+_TEXT_FIELDS = ("industry", "remark", "links")
 
 
 def load_overrides(year: int, quarter: str, date_str: str) -> dict:

@@ -529,8 +529,11 @@ def fetch_stock(code: str, year: int, quarter: str, date_str: str, industry_hint
     return rec
 
 
+_MANUAL_ONLY_KEYS = ("remark", "links", "institution_expectation")
+
+
 def fetch_offline(code: str, prev_raw: dict | None) -> dict | None:
-    """离线模式：复用 raw 缓存中的记录。"""
+    """离线模式：复用 raw 缓存中的记录（剥离人工字段，由本次 manual 合并重新生效）。"""
     if not prev_raw:
         return None
     stock = (prev_raw.get("stocks") or {}).get(code)
@@ -538,5 +541,9 @@ def fetch_offline(code: str, prev_raw: dict | None) -> dict | None:
         return None
     rec = dict(stock)
     rec.pop("auto_hash", None)
+    for key in _MANUAL_ONLY_KEYS:
+        rec.pop(key, None)
+    for key in [k for k in rec if k.endswith("_text")]:
+        rec.pop(key, None)
     rec["offline"] = True
     return rec

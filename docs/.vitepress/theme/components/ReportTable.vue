@@ -17,6 +17,7 @@ interface Row {
   change_pct: number | null
   market_cap_yi: number | null
   industry: string | null
+  np_forecast_yi: number | null
   dynamic_pe: number | null
   cum_pe: number | null
   yoy_pct: number | null
@@ -83,6 +84,7 @@ function display(r: Row, field: keyof Row): string {
     switch (field) {
       case 'price':
       case 'market_cap_yi':
+      case 'np_forecast_yi':
       case 'dynamic_pe':
       case 'cum_pe':
       case 'peg':
@@ -163,6 +165,7 @@ function reset() {
               <th class="num">当日涨跌幅</th>
               <th class="num">总市值(亿)</th>
               <th>行业</th>
+              <th class="num">机构预期利润(亿)</th>
               <th class="num">Q3动态PE(中值)</th>
               <th class="num">累计Q3动态PE</th>
               <th class="num">Q3扣非同比</th>
@@ -181,6 +184,9 @@ function reset() {
               <td class="num">{{ display(r, 'change_pct') }}</td>
               <td class="num">{{ display(r, 'market_cap_yi') }}</td>
               <td>{{ display(r, 'industry') }}</td>
+              <td class="num">
+                {{ display(r, 'np_forecast_yi') }}<sup v-if="star(r, 'np_forecast_yi')" class="qf-star">*</sup>
+              </td>
               <td class="num">
                 {{ display(r, 'dynamic_pe') }}<sup v-if="star(r, 'dynamic_pe')" class="qf-star">*</sup>
               </td>

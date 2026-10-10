@@ -18,9 +18,12 @@ from .utils import (
     fmt_pct,
     fmt_price,
     fmt_ratio,
+    get_logger,
     md_cell_text,
     sha256_text,
 )
+
+logger = get_logger()
 
 ROW_RE = re.compile(r"^\|\s*([A-Za-z0-9][A-Za-z0-9._-]*)\s*\|")
 SEP_RE = re.compile(r"^\|\s*:?-{2,}")
@@ -117,10 +120,10 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
         else:
             peg_txt = starred("peg", fmt_ratio(peg))
 
+    npf = forecast.get("np_median_yi")
+    npf_txt = starred("np_forecast_yi", fmt_ratio(npf)) if npf is not None else "—"
+
     note = rec.get("remark") or ""
-    inst = rec.get("institution_expectation")
-    if inst:
-        note = f"{note}；机构预期：{inst}" if note else f"机构预期：{inst}"
 
     def plain(field: str, formatted: str) -> str:
         return text_override(field) or formatted
@@ -132,6 +135,7 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
         "change_pct": plain("change_pct", fmt_pct(rec.get("change_pct"), digits=2)),
         "market_cap_yi": plain("market_cap_yi", fmt_mcap(rec.get("market_cap_yi"))),
         "industry": md_cell_text(rec.get("industry")),
+        "np_forecast_yi": npf_txt,
         "dynamic_pe": dyn_pe_txt,
         "cum_pe": plain("cum_pe", fmt_ratio(rec.get("cum_pe"))),
         "yoy_pct": plain("yoy_pct", fmt_pct(rec.get("yoy_pct"))),
@@ -188,8 +192,13 @@ def update_report_md(
     records: list[dict],
     manual_fields_map: dict[str, set[str]] | None = None,
     prev_hashes: dict[str, str] | None = None,
+    prune_codes: list[str] | None = None,
 ) -> dict:
-    """增量更新当日报告，返回 {path, created, added, updated, kept_manual, unchanged, hashes}。"""
+    """增量更新当日报告，返回 {path, created, added, updated, kept_manual, unchanged, pruned, hashes}。
+
+    prune_codes 中的股票（如无机构预期被剔除）会从表中移除——仅当该行仍为脚本生成的原样内容；
+    人工改过的行不删除并记入 kept_manual。
+    """
     manual_fields_map = manual_fields_map or {}
     prev_hashes = prev_hashes or {}
     path = C.report_md_path(year, quarter, date_str)
@@ -202,6 +211,7 @@ def update_report_md(
         "updated": [],
         "kept_manual": [],
         "unchanged": [],
+        "pruned": [],
         "hashes": dict(prev_hashes),
     }
 
@@ -230,6 +240,22 @@ def update_report_md(
     to_append: list[str] = []
     rows_changed = False
 
+    # 剔除股票（无机构预期等）：仅移除仍为脚本生成的原样行，人工行保留
+    record_codes = {str(rec.get("code")) for rec in records}
+    del_idx: set[int] = set()
+    for code in prune_codes or []:
+        if code in record_codes or code not in existing:
+            continue
+        idx = existing[code]
+        prev_hash = prev_hashes.get(code)
+        if prev_hash is not None and sha256_text(new_lines[idx]) == prev_hash:
+            del_idx.add(idx)
+            result["pruned"].append(code)
+            result["hashes"].pop(code, None)
+        else:
+            result["kept_manual"].append(code)
+            logger.warning("[%s] 需剔除但行含人工修改，已保留: %s", code, new_lines[idx][:50])
+
     for rec in records:
         code = str(rec.get("code"))
         row = render_row(rec, manual_fields_map.get(code))
@@ -254,9 +280,14 @@ def update_report_md(
             result["hashes"][code] = sha256_text(row)
             result["added"].append(code)
 
+    if del_idx:
+        new_lines = [ln for i, ln in enumerate(new_lines) if i not in del_idx]
+        rows_changed = True
+
     if to_append:
         if table:
-            insert_at = table[1] + 1
+            shift = sum(1 for i in del_idx if i <= table[1])
+            insert_at = table[1] + 1 - shift
             new_lines[insert_at:insert_at] = to_append
         else:
             new_lines += ["", f"## {date_str} 追加更新", "", table_header(quarter), TABLE_SEP] + to_append

@@ -102,27 +102,40 @@ def main(argv: list[str] | None = None) -> int:
     stocks: dict[str, dict] = {code: dict(rec) for code, rec in prev_stocks.items()}
     stocks.update(fetched)
 
-    # 3) 逐条：指标计算 -> 人工 override
+    # 3) 逐条：指标计算 -> 人工 override -> 无机构预期则不入表
     overrides = load_overrides(year, quarter, args.date)
     if overrides:
         logger.info("检测到人工 override: %s", ", ".join(sorted(overrides)))
     records: list[dict] = []
     manual_fields_map: dict[str, set[str]] = {}
+    skipped: list[str] = []
     for code, rec in stocks.items():
-        compute_metrics(rec)
-        manual_fields_map[code] = apply_overrides(rec, overrides.get(code) or {})
-        records.append(rec)
+        # 在副本上计算/合并：人工 override 结果不回写 raw，避免删除 override 后旧值残留
+        work = dict(rec)
+        compute_metrics(work)
+        manual_fields_map[code] = apply_overrides(work, overrides.get(code) or {})
+        if not (work.get("forecast") or {}).get("np_median_yi"):
+            skipped.append(code)
+            continue
+        records.append(work)
+    if skipped:
+        logger.info(
+            "无机构预期未入表: %s（可人工 override np_median_yi 后重跑）",
+            ", ".join(f"{c} {stocks[c].get('name') or '?'}" for c in skipped),
+        )
 
-    # 4) 增量生成 Markdown
+    # 4) 增量生成 Markdown（被跳过的股票，其脚本生成的行将从表中剔除）
     result = update_report_md(
         year, quarter, args.date, records,
         manual_fields_map=manual_fields_map, prev_hashes=prev_hashes,
+        prune_codes=skipped,
     )
     logger.info(
-        "报告: %s | 新建:%s 追加:%s 更新:%s 人工保护:%s 未变:%s",
+        "报告: %s | 新建:%s 追加:%s 更新:%s 剔除:%s 人工保护:%s 未变:%s",
         result["path"], int(result["created"]),
         result["added"] or "无", result["updated"] or "无",
-        result["kept_manual"] or "无", result["unchanged"] or "无",
+        result["pruned"] or "无", result["kept_manual"] or "无",
+        result["unchanged"] or "无",
     )
 
     # 5) 持久化 raw（含行哈希 + 人工修改保护信息）
@@ -143,8 +156,7 @@ def main(argv: list[str] | None = None) -> int:
     update_site_main()
 
     # 7) 待核验提示
-    no_forecast = [str(r["code"]) for r in records if not (r.get("forecast") or {}).get("np_median_yi")]
-    logger.info("完成。请核验 Markdown 中带 * 的字段；无机构预期的股票: %s", ", ".join(no_forecast) or "无")
+    logger.info("完成。请核验 Markdown 中带 * 的字段（机构预期利润/动态PE/PEG），备注列可人工填写")
     if failures:
         logger.warning("本次跳过的股票: %s", ", ".join(failures))
 

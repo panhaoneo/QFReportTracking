@@ -61,7 +61,7 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 | 行情（价格/涨跌幅/总市值） | 腾讯行情 qt.gtimg.cn | 东财快照、tushare |
 | 行业 | 东财个股信息 | 巨潮公司概况、`--industry`、manual |
 | 扣非净利润（单季/同比/环比） | 同花顺「按单季度」财务摘要 | 新浪财务指标（累计差分）、tushare |
-| 机构预期（全年净利润） | 同花顺机构盈利预测（均值≈中值，字段注明） | 东财盈利预测；缺失标记 `无预期*` |
+| 机构预期利润（全年净利润） | 同花顺机构盈利预测（均值≈中值，字段注明） | 东财盈利预测；**无机构预期的股票不进入报表**（raw 缓存仍保留） |
 | 公告链接（业绩预告/财报） | 巨潮资讯披露接口（近 10 天相关公告，取最新 ≤2 条） | manual 中覆盖 `links` |
 | 研报链接 | 东财个股研报（近 180 天最新 ≤2 篇，PDF 直链） | — |
 
@@ -81,7 +81,7 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 
 ## 人工干预（Human-in-the-Loop）
 
-**`*` 的含义**：脚本生成、建议核验的字段（动态PE、PEG）；人工确认过的字段不带 `*`。**备注列**供人工直接修改。
+**`*` 的含义**：脚本生成、建议核验的字段（机构预期利润、动态PE、PEG）；人工确认过的字段不带 `*`。**备注列**仅供人工填写，脚本不写入。
 
 ### 方式 A：直接改 Markdown（应急）
 直接编辑 `reports/.../日期.md` 的行。脚本通过行哈希识别：**人工改过的行会被永久保留**，重跑只刷新未被手改的行、追加新股票。
@@ -97,7 +97,6 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
       "np_median_yi": 28.5,
       "yoy_pct": 280,
       "remark": "人工备注",
-      "institution_expectation": "8家机构全年净利预测约27亿",
       "links": "[业绩预告](https://...) [研报·中信证券](https://...)"
     }
   }
@@ -107,7 +106,7 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 支持的 override 字段：`price` `change_pct` `market_cap_yi` `industry` `np_median_yi`（联动重算 PE/PEG）
 `q_deduct_yi` `prev_year_q_deduct_yi` `prev_q_deduct_yi`（单季扣非成分，联动重算同比/环比，适合业绩预告期按区间中值推算）
 `dynamic_pe` `cum_pe` `yoy_pct` `qoq_pct` `peg`（直接覆盖衍生指标）
-`remark`（备注列）`links`（公告/研报链接整格文本）`institution_expectation`（展示在备注列）。
+`remark`（备注列）`links`（公告/研报链接整格文本）。
 
 数值字段也接受**文本覆盖**，适合扭亏/低基数不可比等场景：如 `"yoy_pct": "扭亏为盈"` 会原样展示，且 PEG 自动置 `—`。无法解析的非法值会被忽略并告警。
 

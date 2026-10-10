@@ -2,7 +2,7 @@
   "date": "2026-10-08",
   "year": 2026,
   "quarter": "Q3",
-  "generated_at": "2026-10-10 15:28:49",
+  "generated_at": "2026-10-10 16:32:36",
   "stocks": {
     "002536": {
       "code": "002536",
@@ -51,16 +51,14 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 15:26:15",
+      "fetched_at": "2026-10-10 16:30:13",
       "yoy_pct": -67.4607786170831,
       "qoq_pct": 52.67175572519085,
       "dynamic_pe": 54.662870159453306,
       "cum_pe": 175.41666666666666,
       "peg": null,
-      "remark": "财务列为10-08预告区间中值推算：前三季扣非0.916~1.136亿（同比-69.85%~-62.61%），单季同比/环比按中值口径；实际以三季报为准",
-      "institution_expectation": "12家机构全年净利预测均值4.39亿",
       "offline": true,
-      "auto_hash": "7bc67665ef9274163dd5ca34a064d9e7389ba9d3f8dcbff0f1dc3e5d1f4855d5"
+      "auto_hash": "31e67487467dde69abfc147f6325b555aae01e2aeddcc280c3a1644fc5cc591d"
     },
     "600521": {
       "code": "600521",
@@ -103,16 +101,14 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 15:26:18",
+      "fetched_at": "2026-10-10 16:30:15",
       "yoy_pct": 395.7909392738567,
       "qoq_pct": -4.8606565847945085,
       "dynamic_pe": 26.444331983805665,
       "cum_pe": 27.89359430604982,
       "peg": null,
-      "yoy_pct_text": "扭亏为盈",
-      "remark": "据10-07预增公告推算：前三季扣非6.62~7.43亿（累计同比+145%~+175%），去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准；另汇兑损失约1.3亿",
       "offline": true,
-      "auto_hash": "344b09c44e6a6b0efabbe27883de93c0a2359780935e6e8ec5c6e8f861b52d83"
+      "auto_hash": "208cac400642e111ca34aabaa23d76ab518d397aa6f02149480c0c889426621f"
     },
     "300821": {
       "code": "300821",
@@ -142,14 +138,12 @@
       "errors": [
         "forecast: 无机构预期数据（可人工 override np_median_yi）"
       ],
-      "fetched_at": "2026-10-10 15:26:20",
+      "fetched_at": "2026-10-10 16:30:18",
       "yoy_pct": 490.56091676718944,
       "qoq_pct": -48.883012314493214,
       "dynamic_pe": null,
       "cum_pe": 25.76794657762938,
       "peg": null,
-      "yoy_pct_text": "扭亏为盈",
-      "remark": "据10-08预告推算：前三季扣非5.89~6.09亿，去年同期受'7·20'火灾影响基数极低、累计同比不具可比性，去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准",
       "offline": true,
       "auto_hash": "e6a7941ea3df424b074cb5c559fb8ff0b169fb09b7eea86d58c96260f3560f05"
     },
@@ -187,15 +181,14 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 15:26:22",
+      "fetched_at": "2026-10-10 16:30:20",
       "yoy_pct": 548.0574324324325,
       "qoq_pct": 164.31277988287977,
       "dynamic_pe": 96.42682926829268,
       "cum_pe": 50.25635593220339,
       "peg": 0.17594292780653184,
-      "remark": "据10-08预告推算：前三季扣非0.944~1.416亿（累计同比+212%~+368%）；单季同比+548%系去年同期基数仅1184万所致；按区间中值推算，实际以三季报为准",
       "offline": true,
-      "auto_hash": "7584d0a2d465743aec6d7efb2dbb2a40bcd2c98b7e616e5632950e1c189e4c1b"
+      "auto_hash": "fd053b42fc5e6f2508fb2c1c781ab76626a42828bde4d2666d46aa4cb28cc837"
     },
     "300373": {
       "code": "300373",
@@ -238,15 +231,14 @@
         "industry": "akshare:cninfo_profile"
       },
       "errors": [],
-      "fetched_at": "2026-10-10 15:26:24",
+      "fetched_at": "2026-10-10 16:30:22",
       "yoy_pct": 60.80715378279798,
       "qoq_pct": 49.67282683093772,
       "dynamic_pe": 25.830865603644646,
       "cum_pe": 26.76384048336467,
       "peg": 0.4247997808927551,
-      "remark": "据10-08预告推算：前三季扣非11.74~13.68亿（累计同比+30.56%~+52.22%）；按区间中值推算，实际以三季报为准",
       "offline": true,
-      "auto_hash": "f9e975712db17f5f526b9e291ee352128baad7586c8749fb8af32ec2a136334c"
+      "auto_hash": "552173914f3316c5ace0cbf2bc90c73a1bed7888d7696c1646b26ec0a23f8b67"
     },
     "300209": {
       "code": "300209",
@@ -276,14 +268,12 @@
       "errors": [
         "forecast: 无机构预期数据（可人工 override np_median_yi）"
       ],
-      "fetched_at": "2026-10-10 15:26:26",
+      "fetched_at": "2026-10-10 16:30:25",
       "yoy_pct": 480.2426343154246,
       "qoq_pct": 814.8019457956915,
       "dynamic_pe": null,
       "cum_pe": 88.89166666666667,
       "peg": null,
-      "yoy_pct_text": "扭亏为盈",
-      "remark": "据10-08预告推算：前三季扣非2.45~2.95亿（去年同期亏损0.78亿，扭亏为盈），含股权激励摊销约5,800万；按区间中值推算，实际以三季报为准",
       "offline": true,
       "auto_hash": "ad3deb760a417cea1ce887e889f6d9de33b9ad180ee9239434ee3c274b1f6bd7"
     }

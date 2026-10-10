@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10 15:28:50",
+  "generated_at": "2026-10-10 16:32:36",
   "days": [
     {
       "date": "2026-10-08",
@@ -16,14 +16,16 @@
           "change_pct": -2.38,
           "market_cap_yi": 239.97,
           "industry": "汽车制造业",
+          "np_forecast_yi": 4.39,
           "dynamic_pe": 54.66,
           "cum_pe": 175.42,
           "yoy_pct": -67.5,
           "qoq_pct": 52.7,
           "peg": null,
           "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002536&announcementId=1225590407&orgId=9900016931&announcementTime=2026-10-08) [研报·华鑫证券](https://pdf.dfcfw.com/pdf/H3_AP202609241829833854_1.pdf) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202609231829812251_1.pdf)",
-          "remark": "财务列为10-08预告区间中值推算：前三季扣非0.916~1.136亿（同比-69.85%~-62.61%），单季同比/环比按中值口径；实际以三季报为准；机构预期：12家机构全年净利预测均值4.39亿",
+          "remark": null,
           "star_fields": [
+            "np_forecast_yi",
             "dynamic_pe"
           ],
           "cells": {
@@ -33,13 +35,14 @@
             "change_pct": "-2.38%",
             "market_cap_yi": "239.97",
             "industry": "汽车制造业",
+            "np_forecast_yi": "4.39*",
             "dynamic_pe": "54.66*",
             "cum_pe": "175.42",
             "yoy_pct": "-67.5%",
             "qoq_pct": "+52.7%",
             "peg": "—",
             "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002536&announcementId=1225590407&orgId=9900016931&announcementTime=2026-10-08) [研报·华鑫证券](https://pdf.dfcfw.com/pdf/H3_AP202609241829833854_1.pdf) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202609231829812251_1.pdf)",
-            "remark": "财务列为10-08预告区间中值推算：前三季扣非0.916~1.136亿（同比-69.85%~-62.61%），单季同比/环比按中值口径；实际以三季报为准；机构预期：12家机构全年净利预测均值4.39亿"
+            "remark": "—"
           },
           "links_list": [
             {
@@ -66,14 +69,16 @@
           "change_pct": 4.8,
           "market_cap_yi": 261.27,
           "industry": "医药制造业",
+          "np_forecast_yi": 9.88,
           "dynamic_pe": 26.44,
           "cum_pe": 27.89,
           "yoy_pct": "扭亏为盈",
           "qoq_pct": -4.9,
           "peg": null,
           "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600521&announcementId=1225595334&orgId=gssh0600521&announcementTime=2026-10-08) [研报·开源证券](https://pdf.dfcfw.com/pdf/H3_AP202608281828633516_1.pdf)",
-          "remark": "据10-07预增公告推算：前三季扣非6.62~7.43亿（累计同比+145%~+175%），去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准；另汇兑损失约1.3亿",
+          "remark": null,
           "star_fields": [
+            "np_forecast_yi",
             "dynamic_pe"
           ],
           "cells": {
@@ -83,13 +88,14 @@
             "change_pct": "+4.80%",
             "market_cap_yi": "261.27",
             "industry": "医药制造业",
+            "np_forecast_yi": "9.88*",
             "dynamic_pe": "26.44*",
             "cum_pe": "27.89",
             "yoy_pct": "扭亏为盈",
             "qoq_pct": "-4.9%",
             "peg": "—",
             "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600521&announcementId=1225595334&orgId=gssh0600521&announcementTime=2026-10-08) [研报·开源证券](https://pdf.dfcfw.com/pdf/H3_AP202608281828633516_1.pdf)",
-            "remark": "据10-07预增公告推算：前三季扣非6.62~7.43亿（累计同比+145%~+175%），去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准；另汇兑损失约1.3亿"
+            "remark": "—"
           },
           "links_list": [
             {
@@ -106,63 +112,22 @@
           "year": 2026,
           "quarter": "Q3",
           "date": "2026-10-08",
-          "code": "300821",
-          "name": "东岳硅材",
-          "price": 17.15,
-          "change_pct": 20.01,
-          "market_cap_yi": 205.8,
-          "industry": "化学原料和化学制品制造业",
-          "dynamic_pe": null,
-          "cum_pe": 25.77,
-          "yoy_pct": "扭亏为盈",
-          "qoq_pct": -48.9,
-          "peg": null,
-          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300821&announcementId=1225596628&orgId=9900037902&announcementTime=2026-10-08%2016:40:29)",
-          "remark": "据10-08预告推算：前三季扣非5.89~6.09亿，去年同期受'7·20'火灾影响基数极低、累计同比不具可比性，去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准",
-          "star_fields": [
-            "dynamic_pe",
-            "peg"
-          ],
-          "cells": {
-            "code": "300821",
-            "name": "东岳硅材",
-            "price": "17.15",
-            "change_pct": "+20.01%",
-            "market_cap_yi": "205.80",
-            "industry": "化学原料和化学制品制造业",
-            "dynamic_pe": "无预期*",
-            "cum_pe": "25.77",
-            "yoy_pct": "扭亏为盈",
-            "qoq_pct": "-48.9%",
-            "peg": "无预期*",
-            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300821&announcementId=1225596628&orgId=9900037902&announcementTime=2026-10-08%2016:40:29)",
-            "remark": "据10-08预告推算：前三季扣非5.89~6.09亿，去年同期受'7·20'火灾影响基数极低、累计同比不具可比性，去年Q3单季亏损（单季口径扭亏）；按区间中值推算，实际以三季报为准"
-          },
-          "links_list": [
-            {
-              "label": "业绩预告",
-              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300821&announcementId=1225596628&orgId=9900037902&announcementTime=2026-10-08%2016:40:29"
-            }
-          ]
-        },
-        {
-          "year": 2026,
-          "quarter": "Q3",
-          "date": "2026-10-08",
           "code": "300964",
           "name": "本川智能",
           "price": 73.99,
           "change_pct": 9.55,
           "market_cap_yi": 79.07,
           "industry": "计算机、通信和其他电子设备制造业",
+          "np_forecast_yi": 0.82,
           "dynamic_pe": 96.43,
           "cum_pe": 50.26,
           "yoy_pct": 548.1,
           "qoq_pct": 164.3,
           "peg": 0.18,
           "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300964&announcementId=1225597473&orgId=gfbj0839243&announcementTime=2026-10-08%2017:52:29)",
-          "remark": "据10-08预告推算：前三季扣非0.944~1.416亿（累计同比+212%~+368%）；单季同比+548%系去年同期基数仅1184万所致；按区间中值推算，实际以三季报为准",
+          "remark": null,
           "star_fields": [
+            "np_forecast_yi",
             "dynamic_pe",
             "peg"
           ],
@@ -173,13 +138,14 @@
             "change_pct": "+9.55%",
             "market_cap_yi": "79.07",
             "industry": "计算机、通信和其他电子设备制造业",
+            "np_forecast_yi": "0.82*",
             "dynamic_pe": "96.43*",
             "cum_pe": "50.26",
             "yoy_pct": "+548.1%",
             "qoq_pct": "+164.3%",
             "peg": "0.18*",
             "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300964&announcementId=1225597473&orgId=gfbj0839243&announcementTime=2026-10-08%2017:52:29)",
-            "remark": "据10-08预告推算：前三季扣非0.944~1.416亿（累计同比+212%~+368%）；单季同比+548%系去年同期基数仅1184万所致；按区间中值推算，实际以三季报为准"
+            "remark": "—"
           },
           "links_list": [
             {
@@ -198,14 +164,16 @@
           "change_pct": 3.06,
           "market_cap_yi": 453.59,
           "industry": "计算机、通信和其他电子设备制造业",
+          "np_forecast_yi": 17.56,
           "dynamic_pe": 25.83,
           "cum_pe": 26.76,
           "yoy_pct": 60.8,
           "qoq_pct": 49.7,
           "peg": 0.42,
           "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300373&announcementId=1225598064&orgId=9900022741&announcementTime=2026-10-08%2019:30:11) [研报·山西证券](https://pdf.dfcfw.com/pdf/H3_AP202608271828549303_1.pdf)",
-          "remark": "据10-08预告推算：前三季扣非11.74~13.68亿（累计同比+30.56%~+52.22%）；按区间中值推算，实际以三季报为准",
+          "remark": null,
           "star_fields": [
+            "np_forecast_yi",
             "dynamic_pe",
             "peg"
           ],
@@ -216,13 +184,14 @@
             "change_pct": "+3.06%",
             "market_cap_yi": "453.59",
             "industry": "计算机、通信和其他电子设备制造业",
+            "np_forecast_yi": "17.56*",
             "dynamic_pe": "25.83*",
             "cum_pe": "26.76",
             "yoy_pct": "+60.8%",
             "qoq_pct": "+49.7%",
             "peg": "0.42*",
             "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300373&announcementId=1225598064&orgId=9900022741&announcementTime=2026-10-08%2019:30:11) [研报·山西证券](https://pdf.dfcfw.com/pdf/H3_AP202608271828549303_1.pdf)",
-            "remark": "据10-08预告推算：前三季扣非11.74~13.68亿（累计同比+30.56%~+52.22%）；按区间中值推算，实际以三季报为准"
+            "remark": "—"
           },
           "links_list": [
             {
@@ -232,49 +201,6 @@
             {
               "label": "研报·山西证券",
               "url": "https://pdf.dfcfw.com/pdf/H3_AP202608271828549303_1.pdf"
-            }
-          ]
-        },
-        {
-          "year": 2026,
-          "quarter": "Q3",
-          "date": "2026-10-08",
-          "code": "300209",
-          "name": "行云科技",
-          "price": 34.46,
-          "change_pct": 2.04,
-          "market_cap_yi": 320.01,
-          "industry": "AI算力",
-          "dynamic_pe": null,
-          "cum_pe": 88.89,
-          "yoy_pct": "扭亏为盈",
-          "qoq_pct": 814.8,
-          "peg": null,
-          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300209&announcementId=1225598065&orgId=9900018896&announcementTime=2026-10-08%2019:30:27)",
-          "remark": "据10-08预告推算：前三季扣非2.45~2.95亿（去年同期亏损0.78亿，扭亏为盈），含股权激励摊销约5,800万；按区间中值推算，实际以三季报为准",
-          "star_fields": [
-            "dynamic_pe",
-            "peg"
-          ],
-          "cells": {
-            "code": "300209",
-            "name": "行云科技",
-            "price": "34.46",
-            "change_pct": "+2.04%",
-            "market_cap_yi": "320.01",
-            "industry": "AI算力",
-            "dynamic_pe": "无预期*",
-            "cum_pe": "88.89",
-            "yoy_pct": "扭亏为盈",
-            "qoq_pct": "+814.8%",
-            "peg": "无预期*",
-            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300209&announcementId=1225598065&orgId=9900018896&announcementTime=2026-10-08%2019:30:27)",
-            "remark": "据10-08预告推算：前三季扣非2.45~2.95亿（去年同期亏损0.78亿，扭亏为盈），含股权激励摊销约5,800万；按区间中值推算，实际以三季报为准"
-          },
-          "links_list": [
-            {
-              "label": "业绩预告",
-              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300209&announcementId=1225598065&orgId=9900018896&announcementTime=2026-10-08%2019:30:27"
             }
           ]
         }
@@ -295,14 +221,16 @@
           "change_pct": 5.44,
           "market_cap_yi": 422.09,
           "industry": "端侧AI",
+          "np_forecast_yi": 27.0,
           "dynamic_pe": 15.63,
           "cum_pe": 25.84,
           "yoy_pct": 290.0,
           "qoq_pct": 70.0,
           "peg": 0.05,
           "links": "三季报 研报·示例证券",
-          "remark": "示例：已对照三季报原文核对；机构预期：8家机构全年净利预测约27亿（均值近似中值）",
+          "remark": null,
           "star_fields": [
+            "np_forecast_yi",
             "dynamic_pe",
             "peg"
           ],
@@ -313,13 +241,14 @@
             "change_pct": "+5.44%",
             "market_cap_yi": "422.09",
             "industry": "端侧AI",
+            "np_forecast_yi": "27.00*",
             "dynamic_pe": "15.63*",
             "cum_pe": "25.84",
             "yoy_pct": "+290.0%",
             "qoq_pct": "+70.0%",
             "peg": "0.05*",
             "links": "三季报 研报·示例证券",
-            "remark": "示例：已对照三季报原文核对；机构预期：8家机构全年净利预测约27亿（均值近似中值）"
+            "remark": "—"
           },
           "links_list": []
         }
@@ -327,8 +256,6 @@
     }
   ],
   "industries": [
-    "AI算力",
-    "化学原料和化学制品制造业",
     "医药制造业",
     "汽车制造业",
     "端侧AI",
@@ -338,5 +265,5 @@
     "2026/Q3",
     "2025/Q3"
   ],
-  "total_rows": 7
+  "total_rows": 5
 }

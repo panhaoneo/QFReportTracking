@@ -103,27 +103,28 @@
   display: table;
   table-layout: fixed;
   width: 100%;
-  min-width: 1378px;
+  min-width: 1450px;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 13px;
 }
 
 /* 固定列宽：与看板列序对应 */
-.qf-table th:nth-child(1) { width: 88px; }
-.qf-table th:nth-child(2) { width: 74px; }
-.qf-table th:nth-child(3) { width: 84px; }
+.qf-table th:nth-child(1) { width: 84px; }
+.qf-table th:nth-child(2) { width: 72px; }
+.qf-table th:nth-child(3) { width: 80px; }
 .qf-table th:nth-child(4) { width: 64px; }
 .qf-table th:nth-child(5) { width: 84px; }
 .qf-table th:nth-child(6) { width: 78px; }
-.qf-table th:nth-child(7) { width: 108px; }
-.qf-table th:nth-child(8) { width: 92px; }
-.qf-table th:nth-child(9) { width: 96px; }
-.qf-table th:nth-child(10) { width: 92px; }
+.qf-table th:nth-child(7) { width: 100px; }
+.qf-table th:nth-child(8) { width: 100px; }
+.qf-table th:nth-child(9) { width: 92px; }
+.qf-table th:nth-child(10) { width: 96px; }
 .qf-table th:nth-child(11) { width: 92px; }
-.qf-table th:nth-child(12) { width: 56px; }
-.qf-table th:nth-child(13) { width: 220px; }
-.qf-table th:nth-child(14) { width: 150px; }
+.qf-table th:nth-child(12) { width: 92px; }
+.qf-table th:nth-child(13) { width: 56px; }
+.qf-table th:nth-child(14) { width: 214px; }
+.qf-table th:nth-child(15) { width: 146px; }
 
 .qf-table th,
 .qf-table td {
@@ -155,7 +156,7 @@
 }
 
 .qf-table thead th:nth-child(n+4):nth-child(-n+6),
-.qf-table thead th:nth-child(n+8):nth-child(-n+12) {
+.qf-table thead th:nth-child(n+8):nth-child(-n+13) {
   text-align: right;
 }
 
@@ -238,7 +239,7 @@
   display: table;
   table-layout: fixed;
   width: 100%;
-  min-width: 1176px;
+  min-width: 1248px;
   margin: 0;
   border-collapse: separate;
   border-spacing: 0;
@@ -247,20 +248,21 @@
 }
 
 /* 固定列宽：与表格 schema 列序对应
-   1代码 2股票 3股价 4涨跌幅 5市值 6行业 7动态PE 8累计PE 9同比 10环比 11PEG 12公告/研报链接 13备注 */
+   1代码 2股票 3股价 4涨跌幅 5市值 6行业 7机构预期 8动态PE 9累计PE 10同比 11环比 12PEG 13公告/研报链接 14备注 */
 .vp-doc .rpt-table-wrap th:nth-child(1) { width: 74px; }
 .vp-doc .rpt-table-wrap th:nth-child(2) { width: 80px; }
 .vp-doc .rpt-table-wrap th:nth-child(3) { width: 60px; }
 .vp-doc .rpt-table-wrap th:nth-child(4) { width: 74px; }
 .vp-doc .rpt-table-wrap th:nth-child(5) { width: 66px; }
-.vp-doc .rpt-table-wrap th:nth-child(6) { width: 108px; }
-.vp-doc .rpt-table-wrap th:nth-child(7) { width: 84px; }
+.vp-doc .rpt-table-wrap th:nth-child(6) { width: 118px; }
+.vp-doc .rpt-table-wrap th:nth-child(7) { width: 86px; }
 .vp-doc .rpt-table-wrap th:nth-child(8) { width: 84px; }
-.vp-doc .rpt-table-wrap th:nth-child(9) { width: 88px; }
+.vp-doc .rpt-table-wrap th:nth-child(9) { width: 84px; }
 .vp-doc .rpt-table-wrap th:nth-child(10) { width: 88px; }
-.vp-doc .rpt-table-wrap th:nth-child(11) { width: 50px; }
-.vp-doc .rpt-table-wrap th:nth-child(12) { width: 170px; }
-.vp-doc .rpt-table-wrap th:nth-child(13) { width: 150px; }
+.vp-doc .rpt-table-wrap th:nth-child(11) { width: 88px; }
+.vp-doc .rpt-table-wrap th:nth-child(12) { width: 50px; }
+.vp-doc .rpt-table-wrap th:nth-child(13) { width: 158px; }
+.vp-doc .rpt-table-wrap th:nth-child(14) { width: 138px; }
 
 .vp-doc .rpt-table-wrap th,
 .vp-doc .rpt-table-wrap td {
@@ -298,7 +300,7 @@
 }
 
 /* 列样式与表格 schema 列序对应：1代码 2股票 3股价 4涨跌幅 5市值 6行业
-   7动态PE 8累计PE 9同比 10环比 11PEG 12公告/研报链接 13备注 */
+   7机构预期 8动态PE 9累计PE 10同比 11环比 12PEG 13公告/研报链接 14备注 */
 .vp-doc .rpt-table-wrap td:nth-child(1) {
   font-family: var(--vp-font-family-mono);
   white-space: nowrap;
@@ -315,7 +317,8 @@
 .vp-doc .rpt-table-wrap td:nth-child(8),
 .vp-doc .rpt-table-wrap td:nth-child(9),
 .vp-doc .rpt-table-wrap td:nth-child(10),
-.vp-doc .rpt-table-wrap td:nth-child(11) {
+.vp-doc .rpt-table-wrap td:nth-child(11),
+.vp-doc .rpt-table-wrap td:nth-child(12) {
   white-space: nowrap;
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -328,7 +331,8 @@
 .vp-doc .rpt-table-wrap th:nth-child(8),
 .vp-doc .rpt-table-wrap th:nth-child(9),
 .vp-doc .rpt-table-wrap th:nth-child(10),
-.vp-doc .rpt-table-wrap th:nth-child(11) {
+.vp-doc .rpt-table-wrap th:nth-child(11),
+.vp-doc .rpt-table-wrap th:nth-child(12) {
   text-align: right;
 }
 

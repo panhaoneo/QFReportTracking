@@ -68,6 +68,7 @@ def table_columns(quarter: str | None = None) -> list[tuple[str, str]]:
         ("change_pct", "当日涨跌幅"),
         ("market_cap_yi", "总市值(亿)"),
         ("industry", "行业"),
+        ("np_forecast_yi", "机构预期利润(亿)"),
         ("dynamic_pe", f"{q}动态PE(中值)"),
         ("cum_pe", f"累计{q}动态PE"),
         ("yoy_pct", f"{q}扣非净利润同比"),
@@ -92,6 +93,8 @@ def field_for_header(header: str) -> str | None:
         "总市值(亿)": "market_cap_yi",
         "总市值": "market_cap_yi",
         "行业": "industry",
+        "机构预期利润(亿)": "np_forecast_yi",
+        "机构预期利润": "np_forecast_yi",
         "PEG": "peg",
         "公告/研报链接": "links",
         "资料链接": "links",
@@ -109,7 +112,7 @@ def field_for_header(header: str) -> str | None:
     return None
 
 # 自动生成、需人工核验的字段（渲染时加 * 标记）
-STAR_FIELDS = {"dynamic_pe", "peg"}
+STAR_FIELDS = {"np_forecast_yi", "dynamic_pe", "peg"}
 
 # 机构预期缺失时 Q3动态PE/PEG 列的占位文案
 NO_FORECAST_TEXT = "无预期*"
@@ -130,6 +133,5 @@ OVERRIDABLE_FIELDS = {
     "qoq_pct": "Q3扣非净利润环比(%)，同样支持文本覆盖",
     "peg": "PEG（支持文本覆盖）",
     "links": "公告/研报链接（Markdown 链接文本，可人工修正整格内容）",
-    "remark": "备注（人工修改）",
-    "institution_expectation": "机构预期描述（自由文本，展示在备注列）",
+    "remark": "备注（仅人工填写，脚本不写入）",
 }
