@@ -1,6 +1,6 @@
 # QFReportTracking · 季度财报自动化跟踪
 
-每日输入当天发布财报的股票代码，自动完成：**数据采集 → 指标计算 → 增长原因归纳 → Markdown 增量归档 → 站点看板更新**。
+每日输入当天发布财报的股票代码，自动完成：**数据采集 → 指标计算 → 公告/研报链接归集 → Markdown 增量归档 → 站点看板更新**。
 支持按季度循环使用（4月/8月/10月…），支持人工修正且**人工结果永不被覆盖**，push 后 GitHub Actions 自动发布 GitHub Pages。
 
 ## 目录结构
@@ -11,7 +11,6 @@ scripts/
   fetch_data.py            # 数据采集（akshare 为主，tushare 可选，offline 缓存）
   calc_metrics.py          # 指标计算（PE / 累计PE / 同比 / 环比 / PEG）
   merge_manual.py          # 合并 manual/ 人工覆盖（优先级最高）
-  summarize.py             # 增长原因（LLM 可选，默认启发式模板）
   generate_md.py           # Markdown 增量生成（人工修改保护）
   update_site.py           # 解析 reports/ 生成站点数据（纯标准库，CI 可用）
   config.py / utils.py     # 配置与工具
@@ -51,7 +50,6 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 | `--quarter` / `--year` | 报告期，缺省按日期推断：1-3月→上年Q4，4-6月→Q1，7-8月→Q2，9-12月→Q3 |
 | `--industry "688099=端侧AI,…"` | 行业兜底（抓取不到行业时使用） |
 | `--offline` | 不联网，复用 `raw/` 缓存（演示/断网时复跑） |
-| `--no-llm` | 禁用 LLM 总结，仅用启发式模板 |
 | `--git-commit` | 生成后自动 `git add + commit`（不会 push） |
 
 重复运行同一天会**先刷新脚本生成的行、追加新股票、跳过人工改过的行**，可安全多次执行。
@@ -64,9 +62,9 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 | 行业 | 东财个股信息 | 巨潮公司概况、`--industry`、manual |
 | 扣非净利润（单季/同比/环比） | 同花顺「按单季度」财务摘要 | 新浪财务指标（累计差分）、tushare |
 | 机构预期（全年净利润） | 同花顺机构盈利预测（均值≈中值，字段注明） | 东财盈利预测；缺失标记 `无预期*` |
-| 增长原因线索 | 东财个股新闻、巨潮公告 | — |
+| 公告链接（业绩预告/财报） | 巨潮资讯披露接口（近 10 天相关公告，取最新 ≤2 条） | manual 中覆盖 `links` |
+| 研报链接 | 东财个股研报（近 180 天最新 ≤2 篇，PDF 直链） | — |
 
-- **LLM 归纳（可选）**：配置 `LLM_API_KEY`，可选 `LLM_BASE_URL`（默认 OpenAI 兼容地址）、`LLM_MODEL`。未配置时用启发式模板。两种结果都带 `*` 待核验。
 - **tushare（可选）**：配置 `TUSHARE_TOKEN` 后作为行情/行业兜底，不配置不影响主流程。
 
 ## 指标公式（口径明确）
@@ -83,7 +81,7 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 
 ## 人工干预（Human-in-the-Loop）
 
-**`*` 的含义**：脚本/AI 生成、建议核验的字段（动态PE、PEG、增长原因）；人工确认过的字段不带 `*`。
+**`*` 的含义**：脚本生成、建议核验的字段（动态PE、PEG）；人工确认过的字段不带 `*`。**备注列**供人工直接修改。
 
 ### 方式 A：直接改 Markdown（应急）
 直接编辑 `reports/.../日期.md` 的行。脚本通过行哈希识别：**人工改过的行会被永久保留**，重跑只刷新未被手改的行、追加新股票。
@@ -98,9 +96,9 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
     "688099": {
       "np_median_yi": 28.5,
       "yoy_pct": 280,
-      "growth_reason": "手动修正的表述",
-      "manual_note": "个人备注",
-      "institution_expectation": "8家机构全年净利预测约27亿"
+      "remark": "人工备注",
+      "institution_expectation": "8家机构全年净利预测约27亿",
+      "links": "[业绩预告](https://...) [研报·中信证券](https://...)"
     }
   }
 }
@@ -109,7 +107,7 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 支持的 override 字段：`price` `change_pct` `market_cap_yi` `industry` `np_median_yi`（联动重算 PE/PEG）
 `q_deduct_yi` `prev_year_q_deduct_yi` `prev_q_deduct_yi`（单季扣非成分，联动重算同比/环比，适合业绩预告期按区间中值推算）
 `dynamic_pe` `cum_pe` `yoy_pct` `qoq_pct` `peg`（直接覆盖衍生指标）
-`growth_reason` `manual_note` `institution_expectation`（文本；后者展示在人工备注列）。
+`remark`（备注列）`links`（公告/研报链接整格文本）`institution_expectation`（展示在备注列）。
 
 数值字段也接受**文本覆盖**，适合扭亏/低基数不可比等场景：如 `"yoy_pct": "扭亏为盈"` 会原样展示，且 PEG 自动置 `—`。无法解析的非法值会被忽略并告警。
 
@@ -141,7 +139,7 @@ git revert <commit>                              # 整体回滚一次自动更�
 `raw/`、`manual/`、`reports/` 下预置了 `2025-10-09 · 688099 晶晨股份` 的演示数据（fixture，非真实抓取），用于离线体验完整流程：
 
 ```bash
-python run.py --date 2025-10-09 --codes 688099 --offline --no-llm
+python run.py --date 2025-10-09 --codes 688099 --offline
 ```
 
 真实使用时可删除该演示文件，或直接按日运行覆盖。

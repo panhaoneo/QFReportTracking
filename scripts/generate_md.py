@@ -40,6 +40,52 @@ def _cell_code(line: str) -> str | None:
     return m.group(1) if m else None
 
 
+def _announcement_label(title: str) -> str:
+    """公告标题 -> 简短链接名。"""
+    t = title
+    if any(k in t for k in ("业绩预告", "业绩预增", "业绩预减")):
+        return "业绩预告"
+    if "业绩快报" in t:
+        return "业绩快报"
+    if "第三季度报告" in t or "三季报" in t:
+        return "三季报"
+    if "第一季度报告" in t or "一季报" in t:
+        return "一季报"
+    if "半年度报告" in t or "半年报" in t:
+        return "中报"
+    if "年度报告" in t:
+        return "年报"
+    return "公告"
+
+
+def _md_link(url: str, label: str) -> str:
+    # 巨潮详情链接的时间参数可能含空格，Markdown 链接内需编码，否则会被截断
+    return f"[{label}]({url.strip().replace(' ', '%20')})"
+
+
+def render_links(rec: dict) -> str:
+    """公告/研报链接列：人工覆盖优先，否则由公告(≤2)+研报(≤2)拼装。"""
+    override = rec.get("links")
+    if override:
+        return md_cell_text(str(override))
+    parts: list[str] = []
+    for ann in (rec.get("announcements") or [])[:2]:
+        if isinstance(ann, dict):
+            label = _announcement_label(str(ann.get("title") or ""))
+            url = ann.get("url")
+            parts.append(_md_link(url, label) if url else label)
+        else:  # 兼容旧格式（纯标题字符串）
+            parts.append(md_cell_text(str(ann)))
+    for i, rep in enumerate((rec.get("research_reports") or [])[:2]):
+        if not isinstance(rep, dict):
+            continue
+        org = str(rep.get("org") or "").strip()[:6]
+        label = f"研报·{org}" if org else f"研报{i + 1}"
+        url = rep.get("url")
+        parts.append(_md_link(url, label) if url else label)
+    return " ".join(parts) if parts else "—"
+
+
 def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
     """渲染一行；manual_fields 中的字段由人工提供，不再加 * 标记。"""
     mf = manual_fields or set()
@@ -71,10 +117,7 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
         else:
             peg_txt = starred("peg", fmt_ratio(peg))
 
-    reason = rec.get("growth_reason") or ""
-    reason_txt = starred("growth_reason", md_cell_text(reason)) if reason else "—"
-
-    note = rec.get("manual_note") or ""
+    note = rec.get("remark") or ""
     inst = rec.get("institution_expectation")
     if inst:
         note = f"{note}；机构预期：{inst}" if note else f"机构预期：{inst}"
@@ -94,8 +137,8 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
         "yoy_pct": plain("yoy_pct", fmt_pct(rec.get("yoy_pct"))),
         "qoq_pct": plain("qoq_pct", fmt_pct(rec.get("qoq_pct"))),
         "peg": peg_txt,
-        "growth_reason": reason_txt,
-        "manual_note": md_cell_text(note),
+        "links": render_links(rec),
+        "remark": md_cell_text(note),
     }
     return "| " + " | ".join(cells[key] for key, _ in C.TABLE_COLUMNS) + " |"
 
@@ -104,8 +147,8 @@ def _header_block(year: int, quarter: str, date_str: str) -> list[str]:
     return [
         f"# {year} {quarter} 财报跟踪 · {date_str}",
         "",
-        "> 数据来源：AKShare/东财（行情、财务）、机构研报聚合（预期）、脚本自动归纳（增长原因，待核验）",
-        "> `*` = 脚本自动生成、待人工核验；人工 override 的字段不带 `*`。",
+        "> 数据来源：AKShare/腾讯（行情）、同花顺（单季扣非）、东方财富（机构预期、研报链接）、巨潮（公告链接）",
+        "> `*` = 脚本自动生成、待人工核验；人工 override 的字段不带 `*`；「备注」列支持直接人工修改。",
         f"> 手动修改本文件的行会被永久保留，重跑只追加新股票；推荐改 `manual/{year}/{quarter}/{date_str}.json` 做字段级覆盖。",
         "",
     ]

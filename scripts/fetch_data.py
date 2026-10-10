@@ -9,7 +9,8 @@
   "code","name","price","change_pct","market_cap_yi","industry",
   "q_deduct_yi","cum_deduct_yi","prev_year_q_deduct_yi","prev_q_deduct_yi",
   "forecast": {"np_median_yi","growth_median_pct","n_reports","target_year","source"},
-  "news": [...], "announcements": [...],
+  "announcements": [{"title","url","date"}],
+  "research_reports": [{"title","org","date","url"}],
   "sources": {...}, "errors": [...], "fetched_at": "..."
 }
 """
@@ -397,21 +398,15 @@ def _fetch_forecast(ak, code: str, year: int) -> dict | None:
     return None
 
 
-# ---------------- 新闻 / 公告 ----------------
+# ---------------- 公告 / 研报链接 ----------------
 
-def _fetch_news(ak, code: str, limit: int = 5) -> list[str]:
-    try:
-        df = ak.stock_news_em(symbol=code)
-        col = _find_col(df, "新闻标题") or _find_col(df, "标题")
-        if col is None:
-            return []
-        return [str(t).strip() for t in df[col].head(limit) if str(t).strip()]
-    except Exception as exc:
-        logger.warning("[%s] 个股新闻失败: %s", code, exc)
-        return []
+_ANNOUNCEMENT_KEYWORDS = (
+    "业绩预告", "业绩预增", "业绩预减", "业绩快报", "季度报告", "半年度报告", "年度报告",
+)
 
 
-def _fetch_announcements(ak, code: str, date_str: str, limit: int = 5) -> list[str]:
+def _fetch_announcements(ak, code: str, date_str: str, limit: int = 2) -> list[dict]:
+    """巨潮公告：最近的相关公告 [{title,url,date}]（业绩预告/定期报告类，按时间倒序取前 N）。"""
     try:
         end = datetime.strptime(date_str, "%Y-%m-%d")
         start = end - timedelta(days=10)
@@ -420,12 +415,64 @@ def _fetch_announcements(ak, code: str, date_str: str, limit: int = 5) -> list[s
             start_date=start.strftime("%Y%m%d"),
             end_date=end.strftime("%Y%m%d"),
         )
-        col = _find_col(df, "公告标题") or _find_col(df, "标题")
-        if col is None:
+        if df is None or df.empty:
             return []
-        return [str(t).strip() for t in df[col].head(limit) if str(t).strip()]
+        title_col = _find_col(df, "公告标题") or _find_col(df, "标题")
+        url_col = _find_col(df, "公告链接") or _find_col(df, "链接")
+        date_col = _find_col(df, "公告时间") or _find_col(df, "时间")
+        if title_col is None:
+            return []
+        if date_col is not None:
+            df = df.sort_values(date_col, ascending=False)
+        out: list[dict] = []
+        for _, row in df.iterrows():
+            title = str(row[title_col]).strip()
+            if not any(k in title for k in _ANNOUNCEMENT_KEYWORDS):
+                continue
+            url = str(row[url_col]).strip() if url_col is not None else ""
+            out.append({
+                "title": title,
+                "url": url if url.startswith("http") else None,
+                "date": str(row[date_col])[:10] if date_col is not None else None,
+            })
+            if len(out) >= limit:
+                break
+        return out
     except Exception as exc:
         logger.warning("[%s] 巨潮公告失败: %s", code, exc)
+        return []
+
+
+def _fetch_research_reports(ak, code: str, limit: int = 2, max_age_days: int = 180) -> list[dict]:
+    """东财个股研报：近 N 天内的最新研报 [{title,org,date,url(PDF)}]。"""
+    try:
+        import pandas as pd
+
+        df = ak.stock_research_report_em(symbol=code)
+        if df is None or df.empty:
+            return []
+        date_col = _find_col(df, "日期")
+        org_col = _find_col(df, "机构")
+        name_col = _find_col(df, "报告名称") or _find_col(df, "标题")
+        url_col = _find_col(df, "PDF链接") or _find_col(df, "链接")
+        if date_col is None:
+            return []
+        df = df.copy()
+        df["_d"] = pd.to_datetime(df[date_col], errors="coerce")
+        cutoff = pd.Timestamp.now() - pd.Timedelta(days=max_age_days)
+        df = df[df["_d"].notna() & (df["_d"] >= cutoff)].sort_values("_d", ascending=False)
+        out: list[dict] = []
+        for _, row in df.head(limit).iterrows():
+            url = str(row[url_col]).strip() if url_col is not None else ""
+            out.append({
+                "title": str(row[name_col]).strip() if name_col is not None else "",
+                "org": str(row[org_col]).strip() if org_col is not None else "",
+                "date": row["_d"].strftime("%Y-%m-%d"),
+                "url": url if url.startswith("http") else None,
+            })
+        return out
+    except Exception as exc:
+        logger.warning("[%s] 东财研报失败: %s", code, exc)
         return []
 
 
@@ -446,8 +493,8 @@ def fetch_stock(code: str, year: int, quarter: str, date_str: str, industry_hint
         "prev_year_q_deduct_yi": None,
         "prev_q_deduct_yi": None,
         "forecast": None,
-        "news": [],
         "announcements": [],
+        "research_reports": [],
         "sources": {},
         "errors": [],
         "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -474,8 +521,8 @@ def fetch_stock(code: str, year: int, quarter: str, date_str: str, industry_hint
     rec["forecast"] = _fetch_forecast(ak, code, year)
     if rec["forecast"] is None:
         rec["errors"].append("forecast: 无机构预期数据（可人工 override np_median_yi）")
-    rec["news"] = _fetch_news(ak, code)
     rec["announcements"] = _fetch_announcements(ak, code, date_str)
+    rec["research_reports"] = _fetch_research_reports(ak, code)
 
     if not rec["name"] and rec["price"] is None and rec["q_deduct_yi"] is None:
         raise FetchError(f"{code} 关键数据全部获取失败: {'; '.join(rec['errors']) or '未知错误'}")

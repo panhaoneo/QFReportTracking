@@ -7,7 +7,7 @@
   python run.py --date 2025-10-09 --codes 688099 --offline        # 复用 raw 缓存（演示/无网）
   python run.py --date 2025-10-09 --codes 688099 --industry "688099=端侧AI" --git-commit
 
-流程：采集 -> 指标计算 -> 人工 override 合并 -> 增长原因 -> 增量写 Markdown -> 站点数据 -> （可选）git commit
+流程：采集 -> 指标计算 -> 人工 override 合并 -> 增量写 Markdown -> 站点数据 -> （可选）git commit
 """
 from __future__ import annotations
 
@@ -21,7 +21,6 @@ from scripts.calc_metrics import compute_metrics
 from scripts import fetch_data
 from scripts.generate_md import update_report_md
 from scripts.merge_manual import apply_overrides, load_overrides
-from scripts.summarize import generate_growth_reason
 from scripts.update_site import main as update_site_main
 from scripts.utils import get_logger, load_json, save_json
 
@@ -36,7 +35,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--year", type=int, default=None, help="报告期年份（默认按日期推断）")
     p.add_argument("--industry", default="", help='行业兜底映射，如 "688099=端侧AI,600176=玻纤"')
     p.add_argument("--offline", action="store_true", help="离线模式：仅复用 raw/ 缓存，不联网抓取")
-    p.add_argument("--no-llm", action="store_true", help="禁用 LLM 总结，仅用启发式模板")
     p.add_argument("--git-commit", action="store_true", help="生成后自动 git add + commit（不 push）")
     return p.parse_args(argv)
 
@@ -104,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
     stocks: dict[str, dict] = {code: dict(rec) for code, rec in prev_stocks.items()}
     stocks.update(fetched)
 
-    # 3) 逐条：指标计算 -> 人工 override -> 增长原因
+    # 3) 逐条：指标计算 -> 人工 override
     overrides = load_overrides(year, quarter, args.date)
     if overrides:
         logger.info("检测到人工 override: %s", ", ".join(sorted(overrides)))
@@ -112,10 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     manual_fields_map: dict[str, set[str]] = {}
     for code, rec in stocks.items():
         compute_metrics(rec)
-        manual = apply_overrides(rec, overrides.get(code) or {})
-        manual_fields_map[code] = manual
-        if not rec.get("growth_reason"):
-            rec["growth_reason"] = generate_growth_reason(rec, use_llm=not args.no_llm)
+        manual_fields_map[code] = apply_overrides(rec, overrides.get(code) or {})
         records.append(rec)
 
     # 4) 增量生成 Markdown

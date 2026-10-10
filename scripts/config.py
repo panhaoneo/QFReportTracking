@@ -73,8 +73,8 @@ def table_columns(quarter: str | None = None) -> list[tuple[str, str]]:
         ("yoy_pct", f"{q}扣非净利润同比"),
         ("qoq_pct", f"{q}扣非净利润环比"),
         ("peg", "PEG"),
-        ("growth_reason", "增长原因简述"),
-        ("manual_note", "人工备注"),
+        ("links", "公告/研报链接"),
+        ("remark", "备注"),
     ]
 
 
@@ -93,8 +93,10 @@ def field_for_header(header: str) -> str | None:
         "总市值": "market_cap_yi",
         "行业": "industry",
         "PEG": "peg",
-        "增长原因简述": "growth_reason",
-        "人工备注": "manual_note",
+        "公告/研报链接": "links",
+        "资料链接": "links",
+        "备注": "remark",
+        "人工备注": "remark",  # 历史文件的旧列名
     }
     if h in exact:
         return exact[h]
@@ -107,7 +109,7 @@ def field_for_header(header: str) -> str | None:
     return None
 
 # 自动生成、需人工核验的字段（渲染时加 * 标记）
-STAR_FIELDS = {"dynamic_pe", "peg", "growth_reason"}
+STAR_FIELDS = {"dynamic_pe", "peg"}
 
 # 机构预期缺失时 Q3动态PE/PEG 列的占位文案
 NO_FORECAST_TEXT = "无预期*"
@@ -127,7 +129,7 @@ OVERRIDABLE_FIELDS = {
     "yoy_pct": "Q3扣非净利润同比(%)，负基数场景可填文本：\"扭亏为盈\"等，将原样展示且PEG置—",
     "qoq_pct": "Q3扣非净利润环比(%)，同样支持文本覆盖",
     "peg": "PEG（支持文本覆盖）",
-    "growth_reason": "增长原因简述",
-    "manual_note": "人工备注",
-    "institution_expectation": "机构预期描述（自由文本，展示在增长原因后方）",
+    "links": "公告/研报链接（Markdown 链接文本，可人工修正整格内容）",
+    "remark": "备注（人工修改）",
+    "institution_expectation": "机构预期描述（自由文本，展示在备注列）",
 }

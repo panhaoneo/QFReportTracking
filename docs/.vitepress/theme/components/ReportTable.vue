@@ -2,6 +2,11 @@
 import { computed, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 
+interface RowLink {
+  label: string
+  url: string
+}
+
 interface Row {
   year: number
   quarter: string
@@ -17,8 +22,9 @@ interface Row {
   yoy_pct: number | null
   qoq_pct: number | null
   peg: number | null
-  growth_reason: string | null
-  manual_note: string | null
+  links: string | null
+  remark: string | null
+  links_list?: RowLink[]
   star_fields: string[]
   cells?: Record<string, string>
 }
@@ -59,7 +65,7 @@ const filtered = computed(() =>
     if (fDate.value !== 'all' && r.date !== fDate.value) return false
     const q = query.value.trim().toLowerCase()
     if (q) {
-      const hay = [r.code, r.name, r.industry, r.growth_reason, r.manual_note, r.date]
+      const hay = [r.code, r.name, r.industry, r.remark, r.date]
         .map((v) => String(v ?? '').toLowerCase())
         .join(' ')
       if (!hay.includes(q)) return false
@@ -162,8 +168,8 @@ function reset() {
               <th class="num">Q3扣非同比</th>
               <th class="num">Q3扣非环比</th>
               <th class="num">PEG</th>
-              <th>增长原因简述</th>
-              <th>人工备注</th>
+              <th>公告/研报链接</th>
+              <th>备注</th>
             </tr>
           </thead>
           <tbody>
@@ -182,10 +188,20 @@ function reset() {
               <td class="num">{{ display(r, 'yoy_pct') }}</td>
               <td class="num">{{ display(r, 'qoq_pct') }}</td>
               <td class="num">{{ display(r, 'peg') }}<sup v-if="star(r, 'peg')" class="qf-star">*</sup></td>
-              <td class="qf-reason">
-                {{ display(r, 'growth_reason') }}<sup v-if="star(r, 'growth_reason')" class="qf-star">*</sup>
+              <td class="qf-links">
+                <template v-if="r.links_list && r.links_list.length">
+                  <a
+                    v-for="l in r.links_list"
+                    :key="l.url"
+                    :href="l.url"
+                    target="_blank"
+                    rel="noopener"
+                    class="qf-link"
+                  >{{ l.label }}</a>
+                </template>
+                <template v-else>{{ display(r, 'links') }}</template>
               </td>
-              <td class="qf-note">{{ display(r, 'manual_note') }}</td>
+              <td class="qf-remark">{{ display(r, 'remark') }}</td>
             </tr>
             <tr v-if="!filtered.length">
               <td colspan="14" class="qf-empty">没有匹配记录</td>
@@ -195,7 +211,8 @@ function reset() {
       </div>
 
       <p class="qf-legend">
-        <sup class="qf-star">*</sup> 表示脚本/AI 自动生成、建议人工核验；人工 override 的字段不带星号。
+        <sup class="qf-star">*</sup> 表示脚本自动生成、建议人工核验；人工 override 的字段不带星号。
+        「公告/研报链接」为自动归集（可点击查看原文），「备注」列为人工修改。
         数据生成于 {{ raw.generated_at }}。
       </p>
     </template>

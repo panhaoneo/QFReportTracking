@@ -26,7 +26,7 @@ except ImportError:  # 允许 python3 scripts/update_site.py 直接运行
 logger = get_logger()
 
 _PATH_RE = re.compile(r"(\d{4})/(Q[1-4])/(\d{4}-\d{2}-\d{2})\.md$")
-STAR_FIELDS = ("dynamic_pe", "peg", "growth_reason")
+_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
 
 
 def _split_row(line: str) -> list[str]:
@@ -83,6 +83,10 @@ def parse_report_md(path: Path) -> dict | None:
             row[field] = parse_cell(raw)
         row["star_fields"] = stars
         row["cells"] = cells_raw
+        row["links_list"] = [
+            {"label": m.group(1), "url": m.group(2)}
+            for m in _LINK_RE.finditer(cells_raw.get("links", ""))
+        ]
         rows.append(row)
     return {"date": date_str, "year": int(year), "quarter": quarter, "rows": rows}
 
