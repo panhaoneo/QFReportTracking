@@ -89,44 +89,82 @@
   color: var(--vp-c-text-2);
 }
 
-/* ---- 表格 ---- */
+/* ---- 看板表格 ----
+   容器独立滚动：表头 sticky(top:0) 只在容器内吸附，不会悬空盖住页面内容；
+   使用 border-collapse: separate 规避 collapse 模式下 sticky 表头绘制错位。 */
 .qf-table-wrap {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: min(72vh, 800px);
   border: 1px solid var(--vp-c-divider);
   border-radius: 10px;
 }
 
 .qf-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
   display: table;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 1378px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
 }
+
+/* 固定列宽：与看板列序对应 */
+.qf-table th:nth-child(1) { width: 88px; }
+.qf-table th:nth-child(2) { width: 74px; }
+.qf-table th:nth-child(3) { width: 84px; }
+.qf-table th:nth-child(4) { width: 64px; }
+.qf-table th:nth-child(5) { width: 84px; }
+.qf-table th:nth-child(6) { width: 78px; }
+.qf-table th:nth-child(7) { width: 108px; }
+.qf-table th:nth-child(8) { width: 92px; }
+.qf-table th:nth-child(9) { width: 96px; }
+.qf-table th:nth-child(10) { width: 92px; }
+.qf-table th:nth-child(11) { width: 92px; }
+.qf-table th:nth-child(12) { width: 56px; }
+.qf-table th:nth-child(13) { width: 220px; }
+.qf-table th:nth-child(14) { width: 150px; }
 
 .qf-table th,
 .qf-table td {
-  padding: 8px 10px;
+  padding: 9px 12px;
+  border: 0;
   border-bottom: 1px solid var(--vp-c-divider);
   border-right: 1px solid var(--vp-c-divider);
-  white-space: normal;
   vertical-align: top;
 }
 
 .qf-table th:last-child,
 .qf-table td:last-child {
-  border-right: none;
+  border-right: 0;
+}
+
+.qf-table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 .qf-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   background: var(--vp-c-bg-soft);
   font-weight: 600;
-  white-space: nowrap;
-  position: sticky;
-  top: var(--vp-nav-height, 64px);
+  white-space: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.qf-table thead th:nth-child(n+4):nth-child(-n+6),
+.qf-table thead th:nth-child(n+8):nth-child(-n+12) {
+  text-align: right;
+}
+
+.qf-table tbody tr:nth-child(even) {
+  background: var(--vp-c-bg-alt);
 }
 
 .qf-table tbody tr:hover {
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-c-default-soft);
 }
 
 .qf-table .num {
@@ -143,14 +181,7 @@
   font-family: var(--vp-font-family-mono);
 }
 
-.qf-reason {
-  min-width: 220px;
-  max-width: 340px;
-}
-
 .qf-note {
-  min-width: 140px;
-  max-width: 240px;
   color: var(--vp-c-text-2);
 }
 
@@ -169,4 +200,116 @@
   margin-top: 12px;
   font-size: 12px;
   color: var(--vp-c-text-3);
+}
+
+/* ---- 每日报告页表格 ----
+   update_site 同步时用 .rpt-table-wrap 包裹 Markdown 表格；
+   为文字列设置最小宽度，避免默认样式把中文压成"一字一行"，宽表在容器内横向滚动。 */
+.vp-doc .rpt-table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.vp-doc .rpt-table-wrap table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 1176px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 固定列宽：与表格 schema 列序对应
+   1代码 2股票 3股价 4涨跌幅 5市值 6行业 7动态PE 8累计PE 9同比 10环比 11PEG 12增长原因 13人工备注 */
+.vp-doc .rpt-table-wrap th:nth-child(1) { width: 74px; }
+.vp-doc .rpt-table-wrap th:nth-child(2) { width: 80px; }
+.vp-doc .rpt-table-wrap th:nth-child(3) { width: 60px; }
+.vp-doc .rpt-table-wrap th:nth-child(4) { width: 74px; }
+.vp-doc .rpt-table-wrap th:nth-child(5) { width: 66px; }
+.vp-doc .rpt-table-wrap th:nth-child(6) { width: 108px; }
+.vp-doc .rpt-table-wrap th:nth-child(7) { width: 84px; }
+.vp-doc .rpt-table-wrap th:nth-child(8) { width: 84px; }
+.vp-doc .rpt-table-wrap th:nth-child(9) { width: 88px; }
+.vp-doc .rpt-table-wrap th:nth-child(10) { width: 88px; }
+.vp-doc .rpt-table-wrap th:nth-child(11) { width: 50px; }
+.vp-doc .rpt-table-wrap th:nth-child(12) { width: 170px; }
+.vp-doc .rpt-table-wrap th:nth-child(13) { width: 150px; }
+
+.vp-doc .rpt-table-wrap th,
+.vp-doc .rpt-table-wrap td {
+  padding: 8px 12px;
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  border-right: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+  background: transparent;
+}
+
+.vp-doc .rpt-table-wrap th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  white-space: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.vp-doc .rpt-table-wrap th:last-child,
+.vp-doc .rpt-table-wrap td:last-child {
+  border-right: 0;
+}
+
+.vp-doc .rpt-table-wrap tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.vp-doc .rpt-table-wrap tbody tr:nth-child(even) {
+  background: var(--vp-c-bg-alt);
+}
+
+.vp-doc .rpt-table-wrap tbody tr:hover {
+  background: var(--vp-c-default-soft);
+}
+
+/* 列样式与表格 schema 列序对应：1代码 2股票 3股价 4涨跌幅 5市值 6行业
+   7动态PE 8累计PE 9同比 10环比 11PEG 12增长原因 13人工备注 */
+.vp-doc .rpt-table-wrap td:nth-child(1) {
+  font-family: var(--vp-font-family-mono);
+  white-space: nowrap;
+}
+
+.vp-doc .rpt-table-wrap td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.vp-doc .rpt-table-wrap td:nth-child(3),
+.vp-doc .rpt-table-wrap td:nth-child(4),
+.vp-doc .rpt-table-wrap td:nth-child(5),
+.vp-doc .rpt-table-wrap td:nth-child(7),
+.vp-doc .rpt-table-wrap td:nth-child(8),
+.vp-doc .rpt-table-wrap td:nth-child(9),
+.vp-doc .rpt-table-wrap td:nth-child(10),
+.vp-doc .rpt-table-wrap td:nth-child(11) {
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.vp-doc .rpt-table-wrap th:nth-child(3),
+.vp-doc .rpt-table-wrap th:nth-child(4),
+.vp-doc .rpt-table-wrap th:nth-child(5),
+.vp-doc .rpt-table-wrap th:nth-child(7),
+.vp-doc .rpt-table-wrap th:nth-child(8),
+.vp-doc .rpt-table-wrap th:nth-child(9),
+.vp-doc .rpt-table-wrap th:nth-child(10),
+.vp-doc .rpt-table-wrap th:nth-child(11) {
+  text-align: right;
+}
+
+.vp-doc .rpt-table-wrap td:nth-child(6) {
+  word-break: break-word;
 }

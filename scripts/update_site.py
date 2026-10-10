@@ -108,6 +108,28 @@ def build_site_data() -> dict:
     }
 
 
+def _wrap_tables(content: str) -> str:
+    """给 Markdown 表格包一层 .rpt-table-wrap（站点侧用于横向滚动与样式控制）。
+
+    markdown-it 会正确解析 HTML 块之间的表格；源文件 reports/*.md 保持纯 Markdown 不变。
+    """
+    lines = content.splitlines()
+    out: list[str] = []
+    in_table = False
+    for line in lines:
+        is_row = line.lstrip().startswith("|")
+        if is_row and not in_table:
+            out += ['<div class="rpt-table-wrap">', ""]
+            in_table = True
+        elif not is_row and in_table:
+            out += ["", "</div>"]
+            in_table = False
+        out.append(line)
+    if in_table:
+        out += ["", "</div>"]
+    return "\n".join(out) + "\n"
+
+
 def sync_docs(days: list[dict]) -> None:
     """拷贝报告原文到 docs/reports 并生成侧边栏（供 config.mts 读取）。"""
     groups: dict[str, list[dict]] = {}
@@ -117,7 +139,7 @@ def sync_docs(days: list[dict]) -> None:
             continue
         dst = C.DOCS_REPORTS_DIR / str(day["year"]) / day["quarter"] / f"{day['date']}.md"
         dst.parent.mkdir(parents=True, exist_ok=True)
-        content = src.read_text(encoding="utf-8")
+        content = _wrap_tables(src.read_text(encoding="utf-8"))
         title = f"{day['date']} 财报跟踪"
         frontmatter = f'---\ntitle: "{title}"\naside: false\n---\n\n'
         atomic_write_text(dst, frontmatter + content)
