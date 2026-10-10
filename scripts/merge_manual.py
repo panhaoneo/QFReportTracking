@@ -27,7 +27,11 @@ from .utils import get_logger, load_json, safe_float
 logger = get_logger()
 
 # 原始成分字段：覆盖后需整体重算衍生指标
-_COMPONENT_FIELDS = ("price", "change_pct", "market_cap_yi", "cum_deduct_yi")
+# （q_deduct_yi 等单季/累计扣非用于业绩预告期按区间推算的场景）
+_COMPONENT_FIELDS = (
+    "price", "change_pct", "market_cap_yi", "cum_deduct_yi",
+    "q_deduct_yi", "prev_year_q_deduct_yi", "prev_q_deduct_yi",
+)
 # 衍生指标字段：直接覆盖，优先级高于重算结果
 _DERIVED_FIELDS = ("dynamic_pe", "cum_pe", "yoy_pct", "qoq_pct", "peg")
 _TEXT_FIELDS = ("industry", "growth_reason", "manual_note", "institution_expectation")
