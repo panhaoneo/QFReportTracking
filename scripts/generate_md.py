@@ -47,20 +47,29 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
     def starred(field: str, text: str) -> str:
         return text if field in mf else f"{text}*"
 
+    def text_override(field: str) -> str | None:
+        """人工文本覆盖（如 yoy_pct="扭亏为盈"），优先生效。"""
+        text = rec.get(f"{field}_text")
+        return md_cell_text(text) if text else None
+
     dyn_pe = rec.get("dynamic_pe")
     forecast = rec.get("forecast") or {}
     has_np_forecast = forecast.get("np_median_yi") is not None
 
-    if dyn_pe is None:
-        dyn_pe_txt = C.NO_FORECAST_TEXT if not has_np_forecast else "—"
-    else:
-        dyn_pe_txt = starred("dynamic_pe", fmt_ratio(dyn_pe))
+    dyn_pe_txt = text_override("dynamic_pe")
+    if dyn_pe_txt is None:
+        if dyn_pe is None:
+            dyn_pe_txt = C.NO_FORECAST_TEXT if not has_np_forecast else "—"
+        else:
+            dyn_pe_txt = starred("dynamic_pe", fmt_ratio(dyn_pe))
 
     peg = rec.get("peg")
-    if peg is None:
-        peg_txt = C.NO_FORECAST_TEXT if (dyn_pe is None and not has_np_forecast) else "—"
-    else:
-        peg_txt = starred("peg", fmt_ratio(peg))
+    peg_txt = text_override("peg")
+    if peg_txt is None:
+        if peg is None:
+            peg_txt = C.NO_FORECAST_TEXT if (dyn_pe is None and not has_np_forecast) else "—"
+        else:
+            peg_txt = starred("peg", fmt_ratio(peg))
 
     reason = rec.get("growth_reason") or ""
     reason_txt = starred("growth_reason", md_cell_text(reason)) if reason else "—"
@@ -70,17 +79,20 @@ def render_row(rec: dict, manual_fields: set[str] | None = None) -> str:
     if inst:
         note = f"{note}；机构预期：{inst}" if note else f"机构预期：{inst}"
 
+    def plain(field: str, formatted: str) -> str:
+        return text_override(field) or formatted
+
     cells = {
         "code": str(rec.get("code", "")).strip(),
         "name": md_cell_text(rec.get("name")),
-        "price": fmt_price(rec.get("price")),
-        "change_pct": fmt_pct(rec.get("change_pct"), digits=2),
-        "market_cap_yi": fmt_mcap(rec.get("market_cap_yi")),
+        "price": plain("price", fmt_price(rec.get("price"))),
+        "change_pct": plain("change_pct", fmt_pct(rec.get("change_pct"), digits=2)),
+        "market_cap_yi": plain("market_cap_yi", fmt_mcap(rec.get("market_cap_yi"))),
         "industry": md_cell_text(rec.get("industry")),
         "dynamic_pe": dyn_pe_txt,
-        "cum_pe": fmt_ratio(rec.get("cum_pe")),
-        "yoy_pct": fmt_pct(rec.get("yoy_pct")),
-        "qoq_pct": fmt_pct(rec.get("qoq_pct")),
+        "cum_pe": plain("cum_pe", fmt_ratio(rec.get("cum_pe"))),
+        "yoy_pct": plain("yoy_pct", fmt_pct(rec.get("yoy_pct"))),
+        "qoq_pct": plain("qoq_pct", fmt_pct(rec.get("qoq_pct"))),
         "peg": peg_txt,
         "growth_reason": reason_txt,
         "manual_note": md_cell_text(note),

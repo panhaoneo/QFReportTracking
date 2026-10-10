@@ -109,7 +109,9 @@ git add -A && git commit -m "auto: 2025-10-09 财报记录" && git push
 支持的 override 字段：`price` `change_pct` `market_cap_yi` `industry` `np_median_yi`（联动重算 PE/PEG）
 `q_deduct_yi` `prev_year_q_deduct_yi` `prev_q_deduct_yi`（单季扣非成分，联动重算同比/环比，适合业绩预告期按区间中值推算）
 `dynamic_pe` `cum_pe` `yoy_pct` `qoq_pct` `peg`（直接覆盖衍生指标）
-`growth_reason` `manual_note` `institution_expectation`（文本；后者展示在人工备注列）。数值字段非法值会被忽略并告警。
+`growth_reason` `manual_note` `institution_expectation`（文本；后者展示在人工备注列）。
+
+数值字段也接受**文本覆盖**，适合扭亏/低基数不可比等场景：如 `"yoy_pct": "扭亏为盈"` 会原样展示，且 PEG 自动置 `—`。无法解析的非法值会被忽略并告警。
 
 ## 容错与增量
 

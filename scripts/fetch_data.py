@@ -66,6 +66,12 @@ def _to_yi(value) -> float | None:
     return round(v / 1e8, 4) if abs(v) > 1e6 else round(v, 4)
 
 
+def _yuan_to_yi(value) -> float | None:
+    """新浪财务指标列名为「(元)」，单位无歧义，直接换算为亿元。"""
+    v = safe_float(value)
+    return None if v is None else round(v / 1e8, 4)
+
+
 def _find_col(df, *keywords):
     for col in df.columns:
         name = str(col)
@@ -250,7 +256,7 @@ def _fetch_financials_sina(ak, code: str, start_year: int) -> dict | None:
     cumulative = {}
     for _, row in df.iterrows():
         d = str(row[date_col]).strip()[:10]
-        v = _to_yi(row[deduct_col])
+        v = _yuan_to_yi(row[deduct_col])
         if v is not None:
             cumulative[d] = v
     return {"cumulative": cumulative}

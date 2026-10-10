@@ -16,7 +16,8 @@ manual/YYYY/Qn/YYYY-MM-DD.json 结构：
 
 合并顺序：
 1) 覆盖原始成分（price/market_cap_yi/np_median_yi 等）→ 2) 重算衍生指标
-→ 3) 覆盖衍生指标（dynamic_pe/yoy_pct/peg…，显式值优先）→ 4) 覆盖文本字段。
+→ 3) 覆盖衍生指标（dynamic_pe/yoy_pct/peg…，显式值优先；数值字段也可填文本，
+    如 "yoy_pct": "扭亏为盈"，将原样展示且 PEG 自动置 —）→ 4) 覆盖文本字段。
 """
 from __future__ import annotations
 
@@ -80,17 +81,28 @@ def apply_overrides(rec: dict, ov: dict) -> set[str]:
             rec[field] = v
     compute_metrics(rec)
 
-    # 3) 显式覆盖的衍生指标优先；PEG 未显式覆盖时与 yoy/pe 保持联动
+    # 3) 显式覆盖的衍生指标优先；非数值文本（如"扭亏为盈"）作为展示文本原样使用
     for field in _DERIVED_FIELDS:
-        if field in ov:
-            v = safe_float(ov[field])
-            if v is None:
-                logger.warning("[%s] 覆盖字段 %s 非法: %r，已跳过", rec.get("code"), field, ov[field])
+        if field not in ov:
+            continue
+        v = safe_float(ov[field])
+        if v is None:
+            text = str(ov[field]).strip() if ov[field] is not None else ""
+            if text:
+                rec[f"{field}_text"] = text
+                manual.add(field)
                 continue
-            rec[field] = v
-            manual.add(field)
+            logger.warning("[%s] 覆盖字段 %s 非法: %r，已跳过", rec.get("code"), field, ov[field])
+            continue
+        rec[field] = v
+        rec.pop(f"{field}_text", None)
+        manual.add(field)
     if "peg" not in ov:
-        recompute_peg(rec)
+        if rec.get("yoy_pct_text"):
+            # 同比为"扭亏为盈"等文本时，PEG 不按数值计算
+            rec["peg"] = None
+        else:
+            recompute_peg(rec)
 
     # 4) 文本字段
     for field in _TEXT_FIELDS:
