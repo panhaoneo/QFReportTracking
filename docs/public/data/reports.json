@@ -1,6 +1,534 @@
 {
-  "generated_at": "2026-10-10 16:49:26",
+  "generated_at": "2026-10-13 16:37:13",
   "days": [
+    {
+      "date": "2026-10-13",
+      "year": 2026,
+      "quarter": "Q3",
+      "rows": [
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "688808",
+          "name": "联讯仪器",
+          "price": 1332.8,
+          "change_pct": 4.37,
+          "market_cap_yi": 2025.15,
+          "industry": "通用设备",
+          "np_forecast_yi": 13.18,
+          "dynamic_pe": 153.65,
+          "cum_pe": 79.94,
+          "yoy_pct": 3318.6,
+          "qoq_pct": 200.6,
+          "peg": 0.05,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688808&announcementId=1225602267&orgId=9900063334&announcementTime=2026-10-13) [研报·东莞证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828918451_1.pdf) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202608311828801220_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "688808",
+            "name": "联讯仪器",
+            "price": "1332.80",
+            "change_pct": "+4.37%",
+            "market_cap_yi": "2025.15",
+            "industry": "通用设备",
+            "np_forecast_yi": "13.18*",
+            "dynamic_pe": "153.65*",
+            "cum_pe": "79.94",
+            "yoy_pct": "+3318.6%",
+            "qoq_pct": "+200.6%",
+            "peg": "0.05*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688808&announcementId=1225602267&orgId=9900063334&announcementTime=2026-10-13) [研报·东莞证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828918451_1.pdf) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202608311828801220_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688808&announcementId=1225602267&orgId=9900063334&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·东莞证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828918451_1.pdf"
+            },
+            {
+              "label": "研报·东吴证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202608311828801220_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "688498",
+          "name": "源杰科技",
+          "price": 1163.0,
+          "change_pct": 3.64,
+          "market_cap_yi": 1447.94,
+          "industry": "半导体",
+          "np_forecast_yi": 10.16,
+          "dynamic_pe": 142.51,
+          "cum_pe": 115.6,
+          "yoy_pct": 727.2,
+          "qoq_pct": 26.3,
+          "peg": 0.2,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688498&announcementId=1225602284&orgId=9900052124&announcementTime=2026-10-13) [研报·华鑫证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828926434_1.pdf) [研报·开源证券](https://pdf.dfcfw.com/pdf/H3_AP202608311828777897_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "688498",
+            "name": "源杰科技",
+            "price": "1163.00",
+            "change_pct": "+3.64%",
+            "market_cap_yi": "1447.94",
+            "industry": "半导体",
+            "np_forecast_yi": "10.16*",
+            "dynamic_pe": "142.51*",
+            "cum_pe": "115.60",
+            "yoy_pct": "+727.2%",
+            "qoq_pct": "+26.3%",
+            "peg": "0.20*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688498&announcementId=1225602284&orgId=9900052124&announcementTime=2026-10-13) [研报·华鑫证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828926434_1.pdf) [研报·开源证券](https://pdf.dfcfw.com/pdf/H3_AP202608311828777897_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688498&announcementId=1225602284&orgId=9900052124&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·华鑫证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828926434_1.pdf"
+            },
+            {
+              "label": "研报·开源证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202608311828777897_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "300199",
+          "name": "翰宇药业",
+          "price": 25.55,
+          "change_pct": 2.65,
+          "market_cap_yi": 225.67,
+          "industry": "化学制药",
+          "np_forecast_yi": 3.4,
+          "dynamic_pe": 66.37,
+          "cum_pe": 39.36,
+          "yoy_pct": "扭亏为盈",
+          "qoq_pct": 90.1,
+          "peg": null,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300199&announcementId=1225601403&orgId=9900017848&announcementTime=2026-10-13)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe"
+          ],
+          "cells": {
+            "code": "300199",
+            "name": "翰宇药业",
+            "price": "25.55",
+            "change_pct": "+2.65%",
+            "market_cap_yi": "225.67",
+            "industry": "化学制药",
+            "np_forecast_yi": "3.40*",
+            "dynamic_pe": "66.37*",
+            "cum_pe": "39.36",
+            "yoy_pct": "扭亏为盈",
+            "qoq_pct": "+90.1%",
+            "peg": "—",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300199&announcementId=1225601403&orgId=9900017848&announcementTime=2026-10-13)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300199&announcementId=1225601403&orgId=9900017848&announcementTime=2026-10-13"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "600111",
+          "name": "北方稀土",
+          "price": 36.07,
+          "change_pct": 3.5,
+          "market_cap_yi": 1303.95,
+          "industry": "小金属",
+          "np_forecast_yi": 44.86,
+          "dynamic_pe": 29.07,
+          "cum_pe": 26.72,
+          "yoy_pct": 245.5,
+          "qoq_pct": 37.7,
+          "peg": 0.12,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600111&announcementId=1225601284&orgId=gssh0600111&announcementTime=2026-10-13) [研报·北京智研科信](https://pdf.dfcfw.com/pdf/H3_AP202610061830166259_1.pdf) [研报·国金证券](https://pdf.dfcfw.com/pdf/H3_AP202608201828191946_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "600111",
+            "name": "北方稀土",
+            "price": "36.07",
+            "change_pct": "+3.50%",
+            "market_cap_yi": "1303.95",
+            "industry": "小金属",
+            "np_forecast_yi": "44.86*",
+            "dynamic_pe": "29.07*",
+            "cum_pe": "26.72",
+            "yoy_pct": "+245.5%",
+            "qoq_pct": "+37.7%",
+            "peg": "0.12*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600111&announcementId=1225601284&orgId=gssh0600111&announcementTime=2026-10-13) [研报·北京智研科信](https://pdf.dfcfw.com/pdf/H3_AP202610061830166259_1.pdf) [研报·国金证券](https://pdf.dfcfw.com/pdf/H3_AP202608201828191946_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600111&announcementId=1225601284&orgId=gssh0600111&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·北京智研科信",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202610061830166259_1.pdf"
+            },
+            {
+              "label": "研报·国金证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202608201828191946_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "000811",
+          "name": "冰轮环境",
+          "price": 36.51,
+          "change_pct": 4.34,
+          "market_cap_yi": 362.35,
+          "industry": "通用设备",
+          "np_forecast_yi": 8.33,
+          "dynamic_pe": 43.5,
+          "cum_pe": 49.23,
+          "yoy_pct": 85.0,
+          "qoq_pct": 58.5,
+          "peg": 0.51,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000811&announcementId=1225601197&orgId=gssz0000811&announcementTime=2026-10-13) [研报·太平洋](https://pdf.dfcfw.com/pdf/H3_AP202609211829729572_1.pdf) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828927557_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "000811",
+            "name": "冰轮环境",
+            "price": "36.51",
+            "change_pct": "+4.34%",
+            "market_cap_yi": "362.35",
+            "industry": "通用设备",
+            "np_forecast_yi": "8.33*",
+            "dynamic_pe": "43.50*",
+            "cum_pe": "49.23",
+            "yoy_pct": "+85.0%",
+            "qoq_pct": "+58.5%",
+            "peg": "0.51*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000811&announcementId=1225601197&orgId=gssz0000811&announcementTime=2026-10-13) [研报·太平洋](https://pdf.dfcfw.com/pdf/H3_AP202609211829729572_1.pdf) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828927557_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000811&announcementId=1225601197&orgId=gssz0000811&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·太平洋",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609211829729572_1.pdf"
+            },
+            {
+              "label": "研报·东吴证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828927557_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "300037",
+          "name": "新宙邦",
+          "price": 61.55,
+          "change_pct": 2.4,
+          "market_cap_yi": 464.02,
+          "industry": "电池",
+          "np_forecast_yi": 21.59,
+          "dynamic_pe": 21.49,
+          "cum_pe": 22.38,
+          "yoy_pct": 135.1,
+          "qoq_pct": 17.3,
+          "peg": 0.16,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300037&announcementId=1225601157&orgId=9900009195&announcementTime=2026-10-13%2000:00:00) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202610131830389630_1.pdf) [研报·山西证券](https://pdf.dfcfw.com/pdf/H3_AP202609071829100085_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "300037",
+            "name": "新宙邦",
+            "price": "61.55",
+            "change_pct": "+2.40%",
+            "market_cap_yi": "464.02",
+            "industry": "电池",
+            "np_forecast_yi": "21.59*",
+            "dynamic_pe": "21.49*",
+            "cum_pe": "22.38",
+            "yoy_pct": "+135.1%",
+            "qoq_pct": "+17.3%",
+            "peg": "0.16*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300037&announcementId=1225601157&orgId=9900009195&announcementTime=2026-10-13%2000:00:00) [研报·东吴证券](https://pdf.dfcfw.com/pdf/H3_AP202610131830389630_1.pdf) [研报·山西证券](https://pdf.dfcfw.com/pdf/H3_AP202609071829100085_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300037&announcementId=1225601157&orgId=9900009195&announcementTime=2026-10-13%2000:00:00"
+            },
+            {
+              "label": "研报·东吴证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202610131830389630_1.pdf"
+            },
+            {
+              "label": "研报·山西证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609071829100085_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "002322",
+          "name": "理工能科",
+          "price": 13.08,
+          "change_pct": 10.01,
+          "market_cap_yi": 47.81,
+          "industry": "软件开发",
+          "np_forecast_yi": 2.67,
+          "dynamic_pe": 17.91,
+          "cum_pe": 17.89,
+          "yoy_pct": 202.5,
+          "qoq_pct": -15.8,
+          "peg": 0.09,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002322&announcementId=1225600870&orgId=9900009448&announcementTime=2026-10-13)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "002322",
+            "name": "理工能科",
+            "price": "13.08",
+            "change_pct": "+10.01%",
+            "market_cap_yi": "47.81",
+            "industry": "软件开发",
+            "np_forecast_yi": "2.67*",
+            "dynamic_pe": "17.91*",
+            "cum_pe": "17.89",
+            "yoy_pct": "+202.5%",
+            "qoq_pct": "-15.8%",
+            "peg": "0.09*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002322&announcementId=1225600870&orgId=9900009448&announcementTime=2026-10-13)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002322&announcementId=1225600870&orgId=9900009448&announcementTime=2026-10-13"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "000989",
+          "name": "九芝堂",
+          "price": 8.93,
+          "change_pct": 1.36,
+          "market_cap_yi": 76.44,
+          "industry": "中药Ⅱ",
+          "np_forecast_yi": 3.04,
+          "dynamic_pe": 25.14,
+          "cum_pe": 20.85,
+          "yoy_pct": "扭亏为盈",
+          "qoq_pct": -43.5,
+          "peg": null,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000989&announcementId=1225600818&orgId=gssz0000989&announcementTime=2026-10-13) [研报·信达证券](https://pdf.dfcfw.com/pdf/H3_AP202604241821526094_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe"
+          ],
+          "cells": {
+            "code": "000989",
+            "name": "九芝堂",
+            "price": "8.93",
+            "change_pct": "+1.36%",
+            "market_cap_yi": "76.44",
+            "industry": "中药Ⅱ",
+            "np_forecast_yi": "3.04*",
+            "dynamic_pe": "25.14*",
+            "cum_pe": "20.85",
+            "yoy_pct": "扭亏为盈",
+            "qoq_pct": "-43.5%",
+            "peg": "—",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000989&announcementId=1225600818&orgId=gssz0000989&announcementTime=2026-10-13) [研报·信达证券](https://pdf.dfcfw.com/pdf/H3_AP202604241821526094_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000989&announcementId=1225600818&orgId=gssz0000989&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·信达证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202604241821526094_1.pdf"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-13",
+          "code": "000933",
+          "name": "神火股份",
+          "price": 26.7,
+          "change_pct": 1.87,
+          "market_cap_yi": 600.48,
+          "industry": "工业金属",
+          "np_forecast_yi": 88.07,
+          "dynamic_pe": 6.82,
+          "cum_pe": 6.08,
+          "yoy_pct": 67.3,
+          "qoq_pct": 4.4,
+          "peg": 0.1,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000933&announcementId=1225600748&orgId=gssz0000933&announcementTime=2026-10-13) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202608201828216650_1.pdf) [研报·中邮证券](https://pdf.dfcfw.com/pdf/H3_AP202607311827516558_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "000933",
+            "name": "神火股份",
+            "price": "26.70",
+            "change_pct": "+1.87%",
+            "market_cap_yi": "600.48",
+            "industry": "工业金属",
+            "np_forecast_yi": "88.07*",
+            "dynamic_pe": "6.82*",
+            "cum_pe": "6.08",
+            "yoy_pct": "+67.3%",
+            "qoq_pct": "+4.4%",
+            "peg": "0.10*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000933&announcementId=1225600748&orgId=gssz0000933&announcementTime=2026-10-13) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202608201828216650_1.pdf) [研报·中邮证券](https://pdf.dfcfw.com/pdf/H3_AP202607311827516558_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000933&announcementId=1225600748&orgId=gssz0000933&announcementTime=2026-10-13"
+            },
+            {
+              "label": "研报·国信证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202608201828216650_1.pdf"
+            },
+            {
+              "label": "研报·中邮证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202607311827516558_1.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "year": 2026,
+      "quarter": "Q3",
+      "rows": [
+        {
+          "year": 2026,
+          "quarter": "Q3",
+          "date": "2026-10-12",
+          "code": "300623",
+          "name": "捷捷微电",
+          "price": 30.23,
+          "change_pct": 0.1,
+          "market_cap_yi": 254.81,
+          "industry": "半导体",
+          "np_forecast_yi": 7.54,
+          "dynamic_pe": 33.79,
+          "cum_pe": 32.51,
+          "yoy_pct": 190.1,
+          "qoq_pct": 46.5,
+          "peg": 0.18,
+          "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300623&announcementId=1225600975&orgId=9900023919&announcementTime=2026-10-12%2016:52:28) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828907944_1.pdf)",
+          "remark": null,
+          "star_fields": [
+            "np_forecast_yi",
+            "dynamic_pe",
+            "peg"
+          ],
+          "cells": {
+            "code": "300623",
+            "name": "捷捷微电",
+            "price": "30.23",
+            "change_pct": "+0.10%",
+            "market_cap_yi": "254.81",
+            "industry": "半导体",
+            "np_forecast_yi": "7.54*",
+            "dynamic_pe": "33.79*",
+            "cum_pe": "32.51",
+            "yoy_pct": "+190.1%",
+            "qoq_pct": "+46.5%",
+            "peg": "0.18*",
+            "links": "[业绩预告](http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300623&announcementId=1225600975&orgId=9900023919&announcementTime=2026-10-12%2016:52:28) [研报·国信证券](https://pdf.dfcfw.com/pdf/H3_AP202609021828907944_1.pdf)",
+            "remark": "—"
+          },
+          "links_list": [
+            {
+              "label": "业绩预告",
+              "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300623&announcementId=1225600975&orgId=9900023919&announcementTime=2026-10-12%2016:52:28"
+            },
+            {
+              "label": "研报·国信证券",
+              "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828907944_1.pdf"
+            }
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-10-10",
       "year": 2026,
@@ -802,13 +1330,21 @@
     }
   ],
   "industries": [
+    "中药Ⅱ",
+    "化学制药",
     "化学原料和化学制品制造业",
     "医药制造业",
+    "半导体",
+    "小金属",
+    "工业金属",
     "汽车制造业",
     "煤炭开采和洗选业",
+    "电池",
     "端侧AI",
     "计算机、通信和其他电子设备制造业",
     "软件和信息技术服务业",
+    "软件开发",
+    "通用设备",
     "非金属矿物制品业",
     "食品制造业"
   ],
@@ -816,5 +1352,5 @@
     "2026/Q3",
     "2025/Q3"
   ],
-  "total_rows": 15
+  "total_rows": 25
 }

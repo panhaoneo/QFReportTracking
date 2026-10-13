@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-13",
+  "note": "三季报未披露。财务口径按各公司2026前三季度业绩预告区间中值推算（源杰科技为Q3单季专项预告、神火股份为确数预告、九芝堂公告直接给出Q3单季区间），公告见表中链接。",
+  "overrides": {
+    "688808": {
+      "q_deduct_yi": 13.3839,
+      "prev_year_q_deduct_yi": 0.3915,
+      "prev_q_deduct_yi": 4.452,
+      "cum_deduct_yi": 19.0
+    },
+    "688498": {
+      "q_deduct_yi": 4.25,
+      "prev_year_q_deduct_yi": 0.5138,
+      "prev_q_deduct_yi": 3.365,
+      "cum_deduct_yi": 9.3944
+    },
+    "300199": {
+      "q_deduct_yi": 2.0063,
+      "prev_year_q_deduct_yi": -0.7255,
+      "prev_q_deduct_yi": 1.0554,
+      "cum_deduct_yi": 4.3,
+      "yoy_pct": "扭亏为盈"
+    },
+    "600111": {
+      "q_deduct_yi": 16.0854,
+      "prev_year_q_deduct_yi": 4.656,
+      "prev_q_deduct_yi": 11.6806,
+      "cum_deduct_yi": 36.6
+    },
+    "000811": {
+      "q_deduct_yi": 2.779,
+      "prev_year_q_deduct_yi": 1.5019,
+      "prev_q_deduct_yi": 1.7528,
+      "cum_deduct_yi": 5.52
+    },
+    "300037": {
+      "q_deduct_yi": 5.857,
+      "prev_year_q_deduct_yi": 2.4918,
+      "prev_q_deduct_yi": 4.9948,
+      "cum_deduct_yi": 15.549
+    },
+    "002322": {
+      "q_deduct_yi": 0.8125,
+      "prev_year_q_deduct_yi": 0.2686,
+      "prev_q_deduct_yi": 0.9648,
+      "cum_deduct_yi": 2.0045
+    },
+    "000989": {
+      "q_deduct_yi": 0.43,
+      "prev_year_q_deduct_yi": -0.0503,
+      "prev_q_deduct_yi": 0.761,
+      "cum_deduct_yi": 2.75,
+      "yoy_pct": "扭亏为盈"
+    },
+    "000933": {
+      "q_deduct_yi": 26.2469,
+      "prev_year_q_deduct_yi": 15.6917,
+      "prev_q_deduct_yi": 25.1355,
+      "cum_deduct_yi": 74.1
+    }
+  }
+}

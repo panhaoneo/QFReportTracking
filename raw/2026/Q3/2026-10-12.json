@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-12",
+  "year": 2026,
+  "quarter": "Q3",
+  "generated_at": "2026-10-13 16:37:13",
+  "stocks": {
+    "300623": {
+      "code": "300623",
+      "report_period": "Q3",
+      "name": "捷捷微电",
+      "price": 30.23,
+      "change_pct": 0.1,
+      "market_cap_yi": 254.81,
+      "industry": "半导体",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 7.54,
+        "n_reports": 2,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 7.21,
+        "np_max_yi": 7.86
+      },
+      "announcements": [
+        {
+          "title": "江苏捷捷微电子股份有限公司2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300623&announcementId=1225600975&orgId=9900023919&announcementTime=2026-10-12 16:52:28",
+          "date": "2026-10-12"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "行业景气度提升，2Q26毛利率环比+5.1pct",
+          "org": "国信证券",
+          "date": "2026-09-02",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828907944_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:15",
+      "offline": true,
+      "auto_hash": "c450859432545096dfe3f2ae221172b0109d9412352cddcce126cb9d33be2d02"
+    }
+  },
+  "failed": []
+}

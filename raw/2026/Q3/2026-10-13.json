@@ -1,0 +1,500 @@
+{
+  "date": "2026-10-13",
+  "year": 2026,
+  "quarter": "Q3",
+  "generated_at": "2026-10-13 16:37:13",
+  "stocks": {
+    "688808": {
+      "code": "688808",
+      "report_period": "Q3",
+      "name": "联讯仪器",
+      "price": 1332.8,
+      "change_pct": 4.37,
+      "market_cap_yi": 2025.15,
+      "industry": "通用设备",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 13.18,
+        "n_reports": 15,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 5.13,
+        "np_max_yi": 22.25
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季业绩预告的自愿性披露公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688808&announcementId=1225602267&orgId=9900063334&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "2026年中报点评：业绩高速兑现，在手订单充裕",
+          "org": "东莞证券",
+          "date": "2026-09-02",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828918451_1.pdf"
+        },
+        {
+          "title": "2026年中报点评：合同负债、存货翻倍增长，净利率大幅提升",
+          "org": "东吴证券",
+          "date": "2026-08-31",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608311828801220_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:18",
+      "offline": true,
+      "auto_hash": "683e531cb19d88f2d600e00522c53efde402c7b7e04e8fd5041c50d8f2e0f58e"
+    },
+    "688498": {
+      "code": "688498",
+      "report_period": "Q3",
+      "name": "源杰科技",
+      "price": 1163.0,
+      "change_pct": 3.64,
+      "market_cap_yi": 1447.94,
+      "industry": "半导体",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 10.16,
+        "n_reports": 14,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 3.98,
+        "np_max_yi": 17.31
+      },
+      "announcements": [
+        {
+          "title": "陕西源杰半导体科技股份有限公司2026年第三季度业绩预告的自愿性披露公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=688498&announcementId=1225602284&orgId=9900052124&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "公司事件点评报告：光模块出货量激增拉动光芯片需求，产品结构优化显著带动毛利率提升",
+          "org": "华鑫证券",
+          "date": "2026-09-02",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828926434_1.pdf"
+        },
+        {
+          "title": "公司信息更新报告：业绩高增长，积极推进高功率CW激光器研发",
+          "org": "开源证券",
+          "date": "2026-08-31",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608311828777897_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:20",
+      "offline": true,
+      "auto_hash": "5834f42c8da4479676ba0ab15d053dca43b1a924d2209599be2aeaa3a1b2f778"
+    },
+    "000833": {
+      "code": "000833",
+      "report_period": "Q3",
+      "name": "粤桂股份",
+      "price": 20.65,
+      "change_pct": 10.02,
+      "market_cap_yi": 176.58,
+      "industry": "综合Ⅱ",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": null,
+      "announcements": [
+        {
+          "title": "广西粤桂广业控股股份有限公司2026年第三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000833&announcementId=1225601877&orgId=gssz0000833&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [
+        "forecast: 无机构预期数据（可人工 override np_median_yi）"
+      ],
+      "fetched_at": "2026-10-13 16:36:22",
+      "offline": true,
+      "auto_hash": null
+    },
+    "300199": {
+      "code": "300199",
+      "report_period": "Q3",
+      "name": "翰宇药业",
+      "price": 25.55,
+      "change_pct": 2.65,
+      "market_cap_yi": 225.67,
+      "industry": "化学制药",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 3.4,
+        "n_reports": 1,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 3.4,
+        "np_max_yi": 3.4
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300199&announcementId=1225601403&orgId=9900017848&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:25",
+      "offline": true,
+      "auto_hash": "cdc10e3b97fdc429fcbd8745eca66ce9bce8c05e226499e98418b9f11b0b73c4"
+    },
+    "600111": {
+      "code": "600111",
+      "report_period": "Q3",
+      "name": "北方稀土",
+      "price": 36.07,
+      "change_pct": 3.5,
+      "market_cap_yi": 1303.95,
+      "industry": "小金属",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 44.86,
+        "n_reports": 10,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 40.31,
+        "np_max_yi": 51.88
+      },
+      "announcements": [
+        {
+          "title": "北方稀土2026年前三季度业绩预增公告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=600111&announcementId=1225601284&orgId=gssh0600111&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "北方稀土深度研究报告：依托白云鄂博资源禀赋的轻稀土龙头，量价齐升业绩再创新高",
+          "org": "北京智研科信咨询",
+          "date": "2026-10-07",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610061830166259_1.pdf"
+        },
+        {
+          "title": "业绩符合预期，看好价格中枢上行",
+          "org": "国金证券",
+          "date": "2026-08-20",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608201828191946_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:26",
+      "offline": true,
+      "auto_hash": "005c83a951fe2b7b0774e2410096826de5a90c77f39a0b377219b5a28062f353"
+    },
+    "000811": {
+      "code": "000811",
+      "report_period": "Q3",
+      "name": "冰轮环境",
+      "price": 36.51,
+      "change_pct": 4.34,
+      "market_cap_yi": 362.35,
+      "industry": "通用设备",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 8.33,
+        "n_reports": 21,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 7.33,
+        "np_max_yi": 9.52
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000811&announcementId=1225601197&orgId=gssz0000811&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "业绩符合预期，冷水机组业务景气增长",
+          "org": "太平洋",
+          "date": "2026-09-21",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609211829729572_1.pdf"
+        },
+        {
+          "title": "顿汉布什加码马来西亚新基地，订单外溢下海外平台价值有望重估",
+          "org": "东吴证券",
+          "date": "2026-09-02",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609021828927557_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:29",
+      "offline": true,
+      "auto_hash": "bfb653b5ab17eb9c0418f650a9dcdff651f1bf791760636c375c88695a2ca152"
+    },
+    "300037": {
+      "code": "300037",
+      "report_period": "Q3",
+      "name": "新宙邦",
+      "price": 61.55,
+      "change_pct": 2.4,
+      "market_cap_yi": 464.02,
+      "industry": "电池",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 21.59,
+        "n_reports": 19,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 11.01,
+        "np_max_yi": 26.46
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=300037&announcementId=1225601157&orgId=9900009195&announcementTime=2026-10-13 00:00:00",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "2026Q3业绩预告点评：电解液盈利稳定，电子信息化学品增量显著",
+          "org": "东吴证券",
+          "date": "2026-10-13",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610131830389630_1.pdf"
+        },
+        {
+          "title": "业绩持续高增，AI浪潮推升电子化学品需求增长",
+          "org": "山西证券",
+          "date": "2026-09-07",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609071829100085_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:31",
+      "offline": true,
+      "auto_hash": "ce965bd8ec6fabfba3290cd00659d7f35280d768ff1e9513f9082a1c6cdbfe49"
+    },
+    "002322": {
+      "code": "002322",
+      "report_period": "Q3",
+      "name": "理工能科",
+      "price": 13.08,
+      "change_pct": 10.01,
+      "market_cap_yi": 47.81,
+      "industry": "软件开发",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 2.67,
+        "n_reports": 1,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 2.67,
+        "np_max_yi": 2.67
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=002322&announcementId=1225600870&orgId=9900009448&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:33",
+      "offline": true,
+      "auto_hash": "4a8acb8790259b4001c351009e620d2eb7a1c3d90044579f92418d89517bc8d9"
+    },
+    "000989": {
+      "code": "000989",
+      "report_period": "Q3",
+      "name": "九芝堂",
+      "price": 8.93,
+      "change_pct": 1.36,
+      "market_cap_yi": 76.44,
+      "industry": "中药Ⅱ",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 3.04,
+        "n_reports": 2,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 2.88,
+        "np_max_yi": 3.2
+      },
+      "announcements": [
+        {
+          "title": "2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000989&announcementId=1225600818&orgId=gssz0000989&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "多肽业务贡献第二增长动力，期待干细胞临床新进展",
+          "org": "信达证券",
+          "date": "2026-04-24",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202604241821526094_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:34",
+      "offline": true,
+      "auto_hash": "c2ab535ddd8b9de9fd30dfc63082cdc8626b65e74a91efb38324b511714cb09c"
+    },
+    "000933": {
+      "code": "000933",
+      "report_period": "Q3",
+      "name": "神火股份",
+      "price": 26.7,
+      "change_pct": 1.87,
+      "market_cap_yi": 600.48,
+      "industry": "工业金属",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": {
+        "np_median_yi": 88.07,
+        "n_reports": 19,
+        "target_year": 2026,
+        "source": "akshare:ths_forecast_mean",
+        "note": "数据源提供机构均值，暂以均值近似中值",
+        "np_min_yi": 49.93,
+        "np_max_yi": 96.81
+      },
+      "announcements": [
+        {
+          "title": "河南神火煤电股份有限公司2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000933&announcementId=1225600748&orgId=gssz0000933&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [
+        {
+          "title": "电解铝维持高利润，煤炭盈利改善",
+          "org": "国信证券",
+          "date": "2026-08-20",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202608201828216650_1.pdf"
+        },
+        {
+          "title": "煤铝景气，推动业绩增长",
+          "org": "中邮证券",
+          "date": "2026-07-31",
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202607311827516558_1.pdf"
+        }
+      ],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [],
+      "fetched_at": "2026-10-13 16:36:36",
+      "offline": true,
+      "auto_hash": "4578639fa88b4056d3796a953051f8bcbda9a26fc5329b70100bbf79a5331876"
+    },
+    "000823": {
+      "code": "000823",
+      "report_period": "Q3",
+      "name": "超声电子",
+      "price": 22.32,
+      "change_pct": 10.0,
+      "market_cap_yi": 132.79,
+      "industry": "元件",
+      "q_deduct_yi": null,
+      "cum_deduct_yi": null,
+      "prev_year_q_deduct_yi": null,
+      "prev_q_deduct_yi": null,
+      "forecast": null,
+      "announcements": [
+        {
+          "title": "广东汕头超声电子股份有限公司2026年前三季度业绩预告",
+          "url": "http://www.cninfo.com.cn/new/disclosure/detail?stockCode=000823&announcementId=1225600634&orgId=gssz0000823&announcementTime=2026-10-13",
+          "date": "2026-10-13"
+        }
+      ],
+      "research_reports": [],
+      "sources": {
+        "quote": "tencent:qt.gtimg.cn",
+        "industry": "akshare:eastmoney_individual_info"
+      },
+      "errors": [
+        "forecast: 无机构预期数据（可人工 override np_median_yi）"
+      ],
+      "fetched_at": "2026-10-13 16:36:39",
+      "offline": true,
+      "auto_hash": null
+    }
+  },
+  "failed": []
+}
